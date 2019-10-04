@@ -10,7 +10,7 @@
 
     <!--Description-->
     
-        <meta name="description" content="都进来康康8⃣️">
+        <meta name="description" content="都进来康康8⃣">
     
 
     <!--Author-->
@@ -25,7 +25,7 @@
 
     <!--Open Graph Description-->
     
-        <meta property="og:description" content="都进来康康8⃣️">
+        <meta property="og:description" content="都进来康康8⃣">
     
 
     <!--Open Graph Site Name-->
@@ -85,31 +85,25 @@
             
             <li class="menu-item">
                 <a href="/">
-                    Home
+                    首页
                 </a>
             </li>
             
             <li class="menu-item">
                 <a href="/archives">
-                    Archives
+                    档案
                 </a>
             </li>
             
             <li class="menu-item">
                 <a href="/tags">
-                    Tags
+                    标签
                 </a>
             </li>
             
             <li class="menu-item">
                 <a href="/categories">
-                    Categories
-                </a>
-            </li>
-            
-            <li class="menu-item">
-                <a href="/contact.html">
-                    Contact
+                    分类
                 </a>
             </li>
             
@@ -165,7 +159,8 @@
         
 
         <!-- Post Content -->
-        <h2 id="部署GitHub"><a href="#部署GitHub" class="headerlink" title="部署GitHub"></a>部署GitHub</h2><p>这个就不讲啦，自己注册。</p>
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本文涉及到一些软件的相关知识，如果你不了解它们，请先去了解一番。<br>如果你已是GitHub用户并且创建了GitHub Pages仓库，你可以跳过部署GitHub。<br>如果你已安装Git、NPM和Node.js，或非Mac OS平台，你可以跳过安装前置软件，但非Mac OS平台的用户请自行解决前置软件的问题。<br><a id="more"></a></p>
+<h2 id="部署GitHub"><a href="#部署GitHub" class="headerlink" title="部署GitHub"></a>部署GitHub</h2><p>这个就不讲啦，自己注册。</p>
 <h2 id="安装前置软件"><a href="#安装前置软件" class="headerlink" title="安装前置软件"></a>安装前置软件</h2><p>主要有Git、NPM和Node.js。</p>
 <h3 id="安装Homebrew"><a href="#安装Homebrew" class="headerlink" title="安装Homebrew"></a>安装Homebrew</h3><p>在Mac OS下，你可以选择通过Homebrew来进行许多服务类软件的安装（这样会方便很多），在其他系统下也有类似的替代方案。<br>　　打开终端, 输入以下脚本：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/bin/ruby -e <span class="string">"<span class="variable">$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)</span>"</span></span><br></pre></td></tr></table></figure></p>
 <p>等待安装完成后，在终端输入brew进行调试，如无报错则可继续。</p>
@@ -226,6 +221,10 @@
     <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 recent-posts">
         <h2>Recent Posts</h2>
         <ul>
+            
+            <li>
+                <a class="footer-post" href="/2019/10/04/post3/">Linux基本命令总结</a>
+            </li>
             
             <li>
                 <a class="footer-post" href="/2019/02/16/Myblog/">在MacOS X上使用GitHub和Hexo搭建博</a>
@@ -346,6 +345,9 @@
 <script type="text/javascript"
 color="220,220,220" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
 </script>
-<!--人体时钟背景透明-->
-<script charset="Shift_JIS" src="http://chabudai.sakura.ne.jp/blogparts/honehoneclock/honehone_clock_tr.js"></script>
+
+<canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+<script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+<script type="text/javascript" src="/js/fireworks.js"></script>
+
 
