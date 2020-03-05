@@ -20,7 +20,7 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="韩思玥的Blog">
+        <meta property="og:title" content="多线程总结">
     
 
     <!--Open Graph Description-->
@@ -33,7 +33,7 @@
 
     <!--Type page-->
     
-        <meta property="og:type" content="website">
+        <meta property="og:type" content="article">
     
 
     <!--Page Cover-->
@@ -44,7 +44,7 @@
 
     <!-- Title -->
     
-    <title>韩思玥的Blog</title>
+    <title>多线程总结 - 韩思玥的Blog</title>
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
@@ -127,17 +127,14 @@
     <div class="logo">
         <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
         
-            <h1 id="main-title" class="title">韩思玥的Blog</h1>
-        
     </div>
 </header>
 
         <section class="main">
             
-                
 <div class="post">
 
-    <div class="post-header index">
+    <div class="post-header">
         <h1 class="title">
             <a href="/2020/03/05/blog1/">
                 多线程总结
@@ -156,9 +153,13 @@
         </div>
     </div>
 
-    
-        <div class="content">
-            <h1 id="Java多线程"><a href="#Java多线程" class="headerlink" title="Java多线程"></a>Java多线程</h1><p>多线程的常见应用场景：<br><br>1、后台任务，例如：定时向大量（100w以上）的用户发送邮件；<br><br>2、异步处理，例如：发微博、记录日志等；<br><br>3、分布式计算<br></p>
+    <div class="content">
+
+        <!-- Gallery -->
+        
+
+        <!-- Post Content -->
+        <h1 id="Java多线程"><a href="#Java多线程" class="headerlink" title="Java多线程"></a>Java多线程</h1><p>多线程的常见应用场景：<br><br>1、后台任务，例如：定时向大量（100w以上）的用户发送邮件；<br><br>2、异步处理，例如：发微博、记录日志等；<br><br>3、分布式计算<br></p>
 <h2 id="1-线程"><a href="#1-线程" class="headerlink" title="1. 线程"></a>1. 线程</h2><h3 id="1-1-定义"><a href="#1-1-定义" class="headerlink" title="1.1 定义"></a>1.1 定义</h3><p>学习线程前，我们先要知道进程！进程是程序的一次动态执行过程，它对应了从代码加载、执行至执行完毕的一个完整过程。<br><br>线程又是什么？线程可以看做轻量级进程，线程是进程的执行单元，是进程调度的基本单位，一个进程在其执行过程中可以产生多个线程。<br></p>
 <p>为什么要用多线程？首先，随着cpu核心数的增加，计算机硬件的并行计算能力得到提升，而同一个时刻一个线程只能运行在一个cpu上，那么计算机的资源被浪费了，所以需要使用多线程。其次，也是为了提高系统的响应速度，如果系统只有一个线程可以执行，那么当不同用户有不同的请求时，由于上一个请求没处理完，那么其他的用户必定需要在一个队列中等待，大大降低响应速度，所以需要多线程。</p>
 <h3 id="1-2-区别"><a href="#1-2-区别" class="headerlink" title="1.2 区别"></a>1.2 区别</h3><p>进程：操作系统层面，每个进程拥有独立的代码和数据空间，进程间切换开销很大，进程是资源分配的最小单元。<br><br>线程：应用程序层面，同一类线程可以共享代码和数据空间，线程间切换开销较小，线程是CPU调度的最小单元。<br><br>线程和进程同样分为五个阶段：创建、就绪、运行、阻塞、终止。</p>
@@ -180,111 +181,25 @@
 <h3 id="2-6-协调同步的线程"><a href="#2-6-协调同步的线程" class="headerlink" title="2.6 协调同步的线程"></a>2.6 协调同步的线程</h3><p>对于synchronized的同步方法可以直接使用这三个方法<br><br>对于synchronized的同步代码块必须使用同步监视器调用这三个方法<br><br>1.wait()<br><br>中断线程执行，使本线程等待，暂时让出CPU使用权，并允许其他线程使用此方法。<br><br>2.notify()<br><br>通知某一处等待的线程结束等待。<br><br>3.notifyAll()<br><br>通知所有等待的线程结束等待。<br></p>
 <h2 id="3-线程池"><a href="#3-线程池" class="headerlink" title="3. 线程池"></a>3. 线程池</h2><p>当线程中存在大量的生存期很短的线程时，可以使用线程池。线程池中存放了大量空闲线程等待被调用；除此之外，线程池可以控制并发的数量，优化程序。</p>
 
-        </div>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2019/10/04/post3/">
-                Linux基本命令总结
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2019-10-04</span>
-            
-            
-            
-                <span class="category">
-                    <a href="/categories/other/">other</a>
-                </span>
-            
-        </div>
     </div>
 
     
-        <div class="content">
-            <h2 id="本文主要介绍Linux系统的常见命令"><a href="#本文主要介绍Linux系统的常见命令" class="headerlink" title="本文主要介绍Linux系统的常见命令"></a>本文主要介绍Linux系统的常见命令</h2><h2 id="1-ls命令"><a href="#1-ls命令" class="headerlink" title="1.ls命令"></a>1.ls命令</h2><p>格式：：ls [选项] [目录或文件]<br>功能：对于目录，列出该目录下的所有子目录与文件；对于文件，列出文件名以及其他信息。<br>
-        </p></div>
-        <a href="/2019/10/04/post3/" class="read-more">Read More</a>
+
+    
+        <div class="post-tags">
+            <i class="fa fa-tags" aria-hidden="true"></i>
+            <a href="/tags/JAVA/">#JAVA</a>
+        </div>
+    
+
+    <!-- Comments -->
     
 
 </div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2019/02/16/Myblog/">
-                在MacOS X上使用GitHub和Hexo搭建博客
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2019-02-16</span>
-            
-            
-            
-                <span class="category">
-                    <a href="/categories/other/">other</a>
-                </span>
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本文涉及到一些软件的相关知识，如果你不了解它们，请先去了解一番。<br>如果你已是GitHub用户并且创建了GitHub Pages仓库，你可以跳过部署GitHub。<br>如果你已安装Git、NPM和Node.js，或非Mac OS平台，你可以跳过安装前置软件，但非Mac OS平台的用户请自行解决前置软件的问题。<br>
-        </p></div>
-        <a href="/2019/02/16/Myblog/" class="read-more">Read More</a>
-    
-
-</div>
-            
-                
-<div class="post">
-
-    <div class="post-header index">
-        <h1 class="title">
-            <a href="/2019/02/15/hello-world/">
-                开启Hexo之旅！
-            </a>
-        </h1>
-        <div class="post-info">
-            
-                <span class="date">2019-02-15</span>
-            
-            
-            
-                <span class="category">
-                    <a href="/categories/other/">other</a>
-                </span>
-            
-        </div>
-    </div>
-
-    
-        <div class="content">
-            <h2 id="怎么使用Hexo呢？"><a href="#怎么使用Hexo呢？" class="headerlink" title="怎么使用Hexo呢？"></a>怎么使用Hexo呢？</h2>
-        </div>
-        <a href="/2019/02/15/hello-world/" class="read-more">Read More</a>
-    
-
-</div>
-            
         </section>
+
     </div>
 </div>
-
-
-
-
 
 
 </div>
