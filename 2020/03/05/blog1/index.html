@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>多线程总结 | 韩思玥的Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Java多线程多线程的常见应用场景：1、后台任务，例如：定时向大量（100w以上）的用户发送邮件；2、异步处理，例如：发微博、记录日志等；3、分布式计算 1. 线程1.1 定义学习线程前，我们先要知道进程！进程是程序的一次动态执行过程，它对应了从代码加载、执行至执行完毕的一个完整过程。线程又是什么？线程可以看做轻量级进程，线程是进程的执行单元，是进程调度的基本单位，一个进程在其执行过程中可以产生多">
+  <meta name="description" content="Java多线程多线程的常见应用场景：1、后台任务，例如：定时向大量（100w以上）的用户发送邮件；2、异步处理，例如：发微博、记录日志等；3、分布式计算">
 <meta name="keywords" content="JAVA">
 <meta property="og:type" content="article">
 <meta property="og:title" content="多线程总结">
 <meta property="og:url" content="http://yoursite.com/2020/03/05/blog1/index.html">
 <meta property="og:site_name" content="韩思玥的Blog">
-<meta property="og:description" content="Java多线程多线程的常见应用场景：1、后台任务，例如：定时向大量（100w以上）的用户发送邮件；2、异步处理，例如：发微博、记录日志等；3、分布式计算 1. 线程1.1 定义学习线程前，我们先要知道进程！进程是程序的一次动态执行过程，它对应了从代码加载、执行至执行完毕的一个完整过程。线程又是什么？线程可以看做轻量级进程，线程是进程的执行单元，是进程调度的基本单位，一个进程在其执行过程中可以产生多">
+<meta property="og:description" content="Java多线程多线程的常见应用场景：1、后台任务，例如：定时向大量（100w以上）的用户发送邮件；2、异步处理，例如：发微博、记录日志等；3、分布式计算">
 <meta property="og:locale" content="ZN-CH">
-<meta property="og:updated_time" content="2020-03-05T09:50:45.152Z">
+<meta property="og:updated_time" content="2020-03-05T11:20:06.199Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="多线程总结">
-<meta name="twitter:description" content="Java多线程多线程的常见应用场景：1、后台任务，例如：定时向大量（100w以上）的用户发送邮件；2、异步处理，例如：发微博、记录日志等；3、分布式计算 1. 线程1.1 定义学习线程前，我们先要知道进程！进程是程序的一次动态执行过程，它对应了从代码加载、执行至执行完毕的一个完整过程。线程又是什么？线程可以看做轻量级进程，线程是进程的执行单元，是进程调度的基本单位，一个进程在其执行过程中可以产生多">
+<meta name="twitter:description" content="Java多线程多线程的常见应用场景：1、后台任务，例如：定时向大量（100w以上）的用户发送邮件；2、异步处理，例如：发微博、记录日志等；3、分布式计算">
   
     <link rel="alternative" href="/atom.xml" title="韩思玥的Blog" type="application/atom+xml">
   
@@ -193,7 +193,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Java多线程"><a href="#Java多线程" class="headerlink" title="Java多线程"></a>Java多线程</h1><p>多线程的常见应用场景：<br><br>1、后台任务，例如：定时向大量（100w以上）的用户发送邮件；<br><br>2、异步处理，例如：发微博、记录日志等；<br><br>3、分布式计算<br></p>
+        <h1 id="Java多线程"><a href="#Java多线程" class="headerlink" title="Java多线程"></a>Java多线程</h1><p>多线程的常见应用场景：<br><br>1、后台任务，例如：定时向大量（100w以上）的用户发送邮件；<br><br>2、异步处理，例如：发微博、记录日志等；<br><br>3、分布式计算<br><br><a id="more"></a></p>
 <h2 id="1-线程"><a href="#1-线程" class="headerlink" title="1. 线程"></a>1. 线程</h2><h3 id="1-1-定义"><a href="#1-1-定义" class="headerlink" title="1.1 定义"></a>1.1 定义</h3><p>学习线程前，我们先要知道进程！进程是程序的一次动态执行过程，它对应了从代码加载、执行至执行完毕的一个完整过程。<br><br>线程又是什么？线程可以看做轻量级进程，线程是进程的执行单元，是进程调度的基本单位，一个进程在其执行过程中可以产生多个线程。<br></p>
 <p>为什么要用多线程？首先，随着cpu核心数的增加，计算机硬件的并行计算能力得到提升，而同一个时刻一个线程只能运行在一个cpu上，那么计算机的资源被浪费了，所以需要使用多线程。其次，也是为了提高系统的响应速度，如果系统只有一个线程可以执行，那么当不同用户有不同的请求时，由于上一个请求没处理完，那么其他的用户必定需要在一个队列中等待，大大降低响应速度，所以需要多线程。</p>
 <h3 id="1-2-区别"><a href="#1-2-区别" class="headerlink" title="1.2 区别"></a>1.2 区别</h3><p>进程：操作系统层面，每个进程拥有独立的代码和数据空间，进程间切换开销很大，进程是资源分配的最小单元。<br><br>线程：应用程序层面，同一类线程可以共享代码和数据空间，线程间切换开销较小，线程是CPU调度的最小单元。<br><br>线程和进程同样分为五个阶段：创建、就绪、运行、阻塞、终止。</p>
