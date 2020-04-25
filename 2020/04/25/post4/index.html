@@ -10,7 +10,7 @@
 
     <!--Description-->
     
-        <meta name="description" content="都进来康康8⃣">
+        <meta name="description" content="HTTPSHTTP、HTTPS区别">
     
 
     <!--Author-->
@@ -20,20 +20,18 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="韩思玥的Blog">
+        <meta property="og:title" content="HTTPS">
     
 
     <!--Open Graph Description-->
     
-        <meta property="og:description" content="都进来康康8⃣">
-    
 
     <!--Open Graph Site Name-->
-    <meta property="og:site_name" content="韩思玥的Blog">
+    <meta property="og:site_name" content="Hansyyy&#39;s Blog">
 
     <!--Type page-->
     
-        <meta property="og:type" content="website">
+        <meta property="og:type" content="article">
     
 
     <!--Page Cover-->
@@ -44,7 +42,7 @@
 
     <!-- Title -->
     
-    <title>page - 韩思玥的Blog</title>
+    <title>HTTPS - Hansyyy&#39;s Blog</title>
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
@@ -91,7 +89,7 @@
             
             <li class="menu-item">
                 <a href="/archives">
-                    档案
+                    归档
                 </a>
             </li>
             
@@ -127,25 +125,22 @@
     <div class="logo">
         <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
         
-            <h1 id="main-title" class="title">韩思玥的Blog</h1>
-        
     </div>
 </header>
 
         <section class="main">
             
-                
 <div class="post">
 
-    <div class="post-header index">
+    <div class="post-header">
         <h1 class="title">
-            <a href="/2019/02/16/Myblog/">
-                在MacOS X上使用GitHub和Hexo搭建博客
+            <a href="/2020/04/25/post4/">
+                HTTPS
             </a>
         </h1>
         <div class="post-info">
             
-                <span class="date">2019-02-16</span>
+                <span class="date">2020-04-25</span>
             
             
             
@@ -156,35 +151,55 @@
         </div>
     </div>
 
-    
-        <div class="content">
-            <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本文涉及到一些软件的相关知识，如果你不了解它们，请先去了解一番。<br>如果你已是GitHub用户并且创建了GitHub Pages仓库，你可以跳过部署GitHub。<br>如果你已安装Git、NPM和Node.js，或非Mac OS平台，你可以跳过安装前置软件，但非Mac OS平台的用户请自行解决前置软件的问题。<br>
-        </p></div>
-        <a href="/2019/02/16/Myblog/" class="read-more">Read More</a>
-    
+    <div class="content">
 
-</div>
-            
-        </section>
+        <!-- Gallery -->
+        
+
+        <!-- Post Content -->
+        <h1 id="HTTPS"><a href="#HTTPS" class="headerlink" title="HTTPS"></a>HTTPS</h1><h3 id="HTTP、HTTPS区别"><a href="#HTTP、HTTPS区别" class="headerlink" title="HTTP、HTTPS区别"></a>HTTP、HTTPS区别</h3><a id="more"></a>
+<ul>
+<li>HTTP 是明文传输，HTTPS 通过 SSL\TLS 进行了加密</li>
+<li>HTTP 的端口号是 80，HTTPS 是 443</li>
+<li>HTTPS 需要到 CA 申请证书，一般免费证书很少，需要交费</li>
+<li>HTTP 的连接很简单，是无状态的；HTTPS 协议是由 SSL+HTTP 协议构建的可进行加密传输、身份认证的网络协议，比 HTTP 协议安全。</li>
+</ul>
+<h3 id="为什么HTTPS"><a href="#为什么HTTPS" class="headerlink" title="为什么HTTPS"></a>为什么HTTPS</h3><ul>
+<li>建立一个信息安全通道，来保证数据传输的安全</li>
+<li>确认网站的真实性，防止钓鱼网站</li>
+</ul>
+<h3 id="HTTPS原理"><a href="#HTTPS原理" class="headerlink" title="HTTPS原理"></a>HTTPS原理</h3><p>使用 RSA 的方法将加密算法的对称密钥发送过去，之后就可以使用使用这个密钥，利用对称密钥来通信了。就比如说我将钥匙放进了保险柜，然后将保险柜寄给对方。</p>
+<h3 id="中间人攻击"><a href="#中间人攻击" class="headerlink" title="中间人攻击"></a>中间人攻击</h3><p>有一个问题就是在使用非对称密钥的时候，首先需要将公钥给对方，那么在这个过程中，安全是没有保障的，中间人可以拦截到公钥，就可以对拦截到的公钥进行篡改。</p>
+<h3 id="确认身份-数字证书"><a href="#确认身份-数字证书" class="headerlink" title="确认身份-数字证书"></a>确认身份-数字证书</h3><ol>
+<li>发送方将公钥和信息通过Hash算法生成消息摘要，再用CA的私钥对信息摘要进行加密生成数字签名。</li>
+<li>数字签名和原始信息（包括公钥和信息）合在一起称为数字证书，只需将数字证书发送给对方就可以了。</li>
+<li>对方在拿到数字证书之后，就用同样的Hash算法，对原始信息再次生成消息摘要，然后用CA的公钥对数字签名解密，得到CA创建的消息摘要，两者一比，就知道有没有人篡改了！</li>
+</ol>
+<p><a href="&quot;https://juejin.im/post/59e4c02151882578d02f4aca&quot;">相关文章</a></p>
+<h1 id="HTTPS加密的是哪部分数据？可以被拦截吗，可以看到哪部分数据？"><a href="#HTTPS加密的是哪部分数据？可以被拦截吗，可以看到哪部分数据？" class="headerlink" title="HTTPS加密的是哪部分数据？可以被拦截吗，可以看到哪部分数据？"></a>HTTPS加密的是哪部分数据？可以被拦截吗，可以看到哪部分数据？</h1><ul>
+<li>加密的是发送方的公钥和个人信息利用Hash算法生成的摘要。用CA的私钥把这个摘要加密成了数字签名。然后发送方发送这个数字签名和原始的公钥和个人信息。</li>
+<li>被拦截后就可以看到公钥和个人信息。</li>
+</ul>
+
     </div>
-</div>
 
+    
 
-
-    <div class="row">
-        <div class="col-sm-12">
-            <div class="wrap-pagination">
-                <a class href="/">
-                    <i class="fa fa-chevron-left" aria-hidden="true"></i>
-                </a>
-                <a class href="/page/3/">
-                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
-                </a>
-            </div>
+    
+        <div class="post-tags">
+            <i class="fa fa-tags" aria-hidden="true"></i>
+            <a href="/tags/HTTPS/">#HTTPS</a>
         </div>
+    
+
+    <!-- Comments -->
+    
+
+</div>
+        </section>
+
     </div>
-
-
+</div>
 
 
 </div>
@@ -207,15 +222,19 @@
         <ul>
             
             <li>
+                <a class="footer-post" href="/2020/04/25/post4/">HTTPS</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2020/03/05/blog1/">多线程总结</a>
+            </li>
+            
+            <li>
                 <a class="footer-post" href="/2019/10/04/post3/">Linux基本命令总结</a>
             </li>
             
             <li>
                 <a class="footer-post" href="/2019/02/16/Myblog/">在MacOS X上使用GitHub和Hexo搭建博</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2019/02/15/hello-world/">开启Hexo之旅！</a>
             </li>
             
         </ul>
@@ -227,6 +246,14 @@
 <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-categories">
     <h2>Categories</h2>
     <ul>
+        
+        <li>
+            <a class="footer-post" href="/categories/网络/">网络</a>
+        </li>
+        
+        <li>
+            <a class="footer-post" href="/categories/Java/">Java</a>
+        </li>
         
         <li>
             <a class="footer-post" href="/categories/other/">other</a>
@@ -241,7 +268,7 @@
                 <ul class="list-inline footer-social-icons">
                     
                     <li class="list-inline-item">
-                        <a href="https://github.com/hansyyy/hansyyy.github.io">
+                        <a href="https://github.com/hansyyy">
                             <span class="footer-icon-container">
                                 <i class="fa fa-github"></i>
                             </span>
@@ -260,7 +287,7 @@
                     
                     
                     <li class="list-inline-item">
-                        <a href="https://www.instagram.com/">
+                        <a href="https://www.instagram.com/eeunice0.0">
                             <span class="footer-icon-container">
                                 <i class="fa fa-instagram"></i>
                             </span>
@@ -295,7 +322,7 @@
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <div class="footer-copyright">
-                    @Untitled. All right reserved | Design & Hexo 
+                    @Hansyyy. All right reserved | Design & Hexo 
                 </div>
             </div>
         </div>
