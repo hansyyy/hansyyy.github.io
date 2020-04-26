@@ -13,6 +13,10 @@
     
 
     
+        <meta name="description" content="Hexo个人博客绑定域名因为使用userName.github.io访问个人博客访问速度较慢，所以可以试着用自己的域名作为访问域名。以下是更改步骤：
+1.申请个人域名首先去申请（买）一个个人域名，我是在腾讯云买的，你可以根据个人喜好在阿里云等等相关网站买到。
+2.DNS修改在你所买域名的平台里打开域">
+    
 
     <!--Author-->
     
@@ -21,10 +25,14 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="Hansyyy&#39;s Blog">
+        <meta property="og:title" content="Hexo个人博客绑定域名">
     
 
     <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Hexo个人博客绑定域名因为使用userName.github.io访问个人博客访问速度较慢，所以可以试着用自己的域名作为访问域名。以下是更改步骤：
+1.申请个人域名首先去申请（买）一个个人域名，我是在腾讯云买的，你可以根据个人喜好在阿里云等等相关网站买到。
+2.DNS修改在你所买域名的平台里打开域">
     
 
     <!--Open Graph Site Name-->
@@ -32,7 +40,7 @@
 
     <!--Type page-->
     
-        <meta property="og:type" content="website">
+        <meta property="og:type" content="article">
     
 
     <!--Page Cover-->
@@ -51,7 +59,7 @@
 
     <!-- Title -->
     
-    <title>other - Hansyyy&#39;s Blog</title>
+    <title>Hexo个人博客绑定域名 - Hansyyy&#39;s Blog</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
@@ -153,101 +161,84 @@
 </nav>
 
     <!-- Main Content -->
-    
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
 
-<!-- Page Header -->
-<!-- Set your background image for this header in the theme's configuration: index_cover -->
 <header class="intro-header" style="background-image: url('http://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/img/home-bg.jpg')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                    <h1>other</h1>
+                <div class="post-heading">
+                    <h1>Hexo个人博客绑定域名</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2020-04-26
+                        
+                    </span>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/tags/Hexo/">#Hexo</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/categories/other/">other</a>
+
+                    
+                </div>
             
-                <div class="post-preview">
-    <a href="/2020/04/26/post5/">
-        <h1 class="post-title archive">
-            Hexo个人博客绑定域名
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2020-04-26
-    </p>
-</div>
+
+            <!-- Gallery -->
             
-                <div class="post-preview">
-    <a href="/2020/04/25/post4/">
-        <h1 class="post-title archive">
-            HTTPS
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2020-04-25
-    </p>
-</div>
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="Hexo个人博客绑定域名"><a href="#Hexo个人博客绑定域名" class="headerlink" title="Hexo个人博客绑定域名"></a>Hexo个人博客绑定域名</h1><p>因为使用userName.github.io访问个人博客访问速度较慢，所以可以试着用自己的域名作为访问域名。以下是更改步骤：</p>
+<h2 id="1-申请个人域名"><a href="#1-申请个人域名" class="headerlink" title="1.申请个人域名"></a>1.申请个人域名</h2><p>首先去申请（买）一个个人域名，我是在腾讯云买的，你可以根据个人喜好在阿里云等等相关网站买到。</p>
+<h2 id="2-DNS修改"><a href="#2-DNS修改" class="headerlink" title="2.DNS修改"></a>2.<code>DNS</code>修改</h2><p>在你所买域名的平台里打开域名控制台找到DNS修改，一般都有默认的域名DNS，如果没有，请添加：<code>dns29.hichina.com</code>和<code>dns30.hichina.com</code></p>
+<h2 id="3-添加DNS解析"><a href="#3-添加DNS解析" class="headerlink" title="3.添加DNS解析"></a>3.添加<code>DNS</code>解析</h2><p>github官网提供的两个主机ip地址：<code>192.30.252.153</code> 和 <code>192.30.252.154</code>， 将这两个作为主机地址，给域名的DNS解析添加两个 <code>A记录</code>，主机记录为<code>@</code>，然后再添加一个 <code>GNAME记录</code> 主机地址填的是我们原本用来访问github博客的地址：<code>userName.github.io</code>，主机记录为<code>www</code></p>
+<h2 id="4-创建GNAME文件"><a href="#4-创建GNAME文件" class="headerlink" title="4.创建GNAME文件"></a>4.创建<code>GNAME</code>文件</h2><p>在hexo本地目录 <code>source</code> 目录下面新建一个文件，取名为 <code>GNAME</code> (无后缀！！！)，内容就是上面所说到的自己的域名，并运行hexo指令使之生效。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<h2 id="5-域名绑定"><a href="#5-域名绑定" class="headerlink" title="5.域名绑定"></a>5.域名绑定</h2><p>打开博客在Github中的地址，然后切换到 <code>Settings</code>页，设置<code>Custom domain</code>内容为我们自己的域名值（例如：我的域名是seafog.top），点击<code>Save</code>按钮保存，就可以正常访问啦～</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
             
-                <div class="post-preview">
-    <a href="/2019/10/04/post3/">
-        <h1 class="post-title archive">
-            Linux基本命令总结
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2019-10-04
-    </p>
-</div>
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
             
-                <div class="post-preview">
-    <a href="/2019/02/16/Myblog/">
-        <h1 class="post-title archive">
-            在MacOS X上使用GitHub和Hexo搭建博客
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2019-02-16
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2019/02/15/hello-world/">
-        <h1 class="post-title archive">
-            开启Hexo之旅！
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2019-02-15
-    </p>
-</div>
-            
-            <div class="archive-before-pagination"></div>
-            <ul class="pager">
-    
-    
-</ul>
         </div>
     </div>
-</div>
-
+</article>
 
     <!-- Footer -->
     <hr>
