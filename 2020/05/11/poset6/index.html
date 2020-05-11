@@ -13,6 +13,15 @@
     
 
     
+        <meta name="description" content="Java 进制转换十进制转十六进制:
+Integer.toHexString(int i);
+十进制转八进制:
+Integer.toOctalString(int i);
+十进制转二进制:
+Integer.toBinaryString(int i);
+radix进制转十进制:
+Integer.val">
+    
 
     <!--Author-->
     
@@ -21,10 +30,19 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="Hansyyy&#39;s Blog">
+        <meta property="og:title" content="Java 进制转换">
     
 
     <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Java 进制转换十进制转十六进制:
+Integer.toHexString(int i);
+十进制转八进制:
+Integer.toOctalString(int i);
+十进制转二进制:
+Integer.toBinaryString(int i);
+radix进制转十进制:
+Integer.val">
     
 
     <!--Open Graph Site Name-->
@@ -32,7 +50,7 @@
 
     <!--Type page-->
     
-        <meta property="og:type" content="website">
+        <meta property="og:type" content="article">
     
 
     <!--Page Cover-->
@@ -51,7 +69,7 @@
 
     <!-- Title -->
     
-    <title>Linux - Hansyyy&#39;s Blog</title>
+    <title>Java 进制转换 - Hansyyy&#39;s Blog</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
@@ -153,49 +171,87 @@
 </nav>
 
     <!-- Main Content -->
-    
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
 
-<!-- Page Header -->
-<!-- Set your background image for this header in the theme's configuration: index_cover -->
 <header class="intro-header" style="background-image: url('http://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/img/home-bg.jpg')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                    <h1>#Linux</h1>
+                <div class="post-heading">
+                    <h1>Java 进制转换</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2020-05-11
+                        
+                    </span>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/tags/Java/">#Java</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/categories/Java/">Java</a>
+
+                    
+                </div>
             
-                <div class="post-preview">
-    <a href="/2019/10/04/post3/">
-        <h1 class="post-title archive">
-            Linux基本命令总结
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2019-10-04
-    </p>
-</div>
+
+            <!-- Gallery -->
             
-            <div class="archive-before-pagination"></div>
-            <ul class="pager">
-    
-    
-</ul>
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="Java-进制转换"><a href="#Java-进制转换" class="headerlink" title="Java 进制转换"></a>Java 进制转换</h1><p>十进制转十六进制:</p>
+<p><code>Integer.toHexString(int i);</code></p>
+<p>十进制转八进制:</p>
+<p><code>Integer.toOctalString(int i);</code></p>
+<p>十进制转二进制:</p>
+<p><code>Integer.toBinaryString(int i);</code></p>
+<p>radix进制转十进制:</p>
+<p><code>Integer.valueOf(String s,int radix).toString;//结果为String</code></p>
+<p>或者使用第二个参数指定的基数，将字符串参数解析为有符号的整数:</p>
+<p><code>parseInt(String s,int radix);</code></p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
         </div>
     </div>
-</div>
-
+</article>
 
     <!-- Footer -->
     <hr>
