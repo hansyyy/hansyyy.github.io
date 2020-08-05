@@ -13,12 +13,8 @@
     
 
     
-        <meta name="description" content="HTTPS为什么HTTPS
-建立一个信息安全通道，来保证数据传输的安全
-确认网站的真实性，防止钓鱼网站
-
-HTTPS原理使用 RSA 的方法将加密算法的对称密钥发送过去，之后就可以使用使用这个密钥，利用对称密钥来通信了。就比如说我将钥匙放进了保险柜，然后将保险柜寄给对方。
-中间人攻击有一个问题就是在">
+        <meta name="description" content="Java深浅拷贝含义1、浅拷贝（同一个引用）：被复制对象的所有变量都含有与原来的对象相同的值，而所有的对其他对象的引用仍然指向原来的对象。换言之，浅复制仅仅复制所考虑的对象，而不复制它所引用的对象。
+2、深拷贝（新引用）：被复制对象的所有变量都含有与原来的对象相同的值，除去那些引用其他对象的变量。那">
     
 
     <!--Author-->
@@ -28,17 +24,13 @@ HTTPS原理使用 RSA 的方法将加密算法的对称密钥发送过去，之�
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="HTTPS">
+        <meta property="og:title" content="Java深浅拷贝">
     
 
     <!--Open Graph Description-->
     
-        <meta property="og:description" content="HTTPS为什么HTTPS
-建立一个信息安全通道，来保证数据传输的安全
-确认网站的真实性，防止钓鱼网站
-
-HTTPS原理使用 RSA 的方法将加密算法的对称密钥发送过去，之后就可以使用使用这个密钥，利用对称密钥来通信了。就比如说我将钥匙放进了保险柜，然后将保险柜寄给对方。
-中间人攻击有一个问题就是在">
+        <meta property="og:description" content="Java深浅拷贝含义1、浅拷贝（同一个引用）：被复制对象的所有变量都含有与原来的对象相同的值，而所有的对其他对象的引用仍然指向原来的对象。换言之，浅复制仅仅复制所考虑的对象，而不复制它所引用的对象。
+2、深拷贝（新引用）：被复制对象的所有变量都含有与原来的对象相同的值，除去那些引用其他对象的变量。那">
     
 
     <!--Open Graph Site Name-->
@@ -65,7 +57,7 @@ HTTPS原理使用 RSA 的方法将加密算法的对称密钥发送过去，之�
 
     <!-- Title -->
     
-    <title>HTTPS - Hansyyy&#39;s Blog</title>
+    <title>Java深浅拷贝 - Hansyyy&#39;s Blog</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
@@ -175,13 +167,13 @@ HTTPS原理使用 RSA 的方法将加密算法的对称密钥发送过去，之�
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="post-heading">
-                    <h1>HTTPS</h1>
+                    <h1>Java深浅拷贝</h1>
                     
                     <span class="meta">
                         <!-- Date and Author -->
                         
                         
-                            2020-04-25
+                            2020-07-27
                         
                     </span>
                 </div>
@@ -202,7 +194,7 @@ HTTPS原理使用 RSA 的方法将加密算法的对称密钥发送过去，之�
                         
 
 
-<a href="/tags/HTTPS/">#HTTPS</a>
+<a href="/tags/Java/">#Java</a>
 
 
                     
@@ -211,7 +203,7 @@ HTTPS原理使用 RSA 的方法将加密算法的对称密钥发送过去，之�
                     
                         
 
-<a href="/categories/计算机网络/">计算机网络</a>
+<a href="/categories/Java/">Java</a>
 
                     
                 </div>
@@ -222,22 +214,12 @@ HTTPS原理使用 RSA 的方法将加密算法的对称密钥发送过去，之�
 
             <!-- Post Main Content -->
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <h1 id="HTTPS"><a href="#HTTPS" class="headerlink" title="HTTPS"></a>HTTPS</h1><h3 id="为什么HTTPS"><a href="#为什么HTTPS" class="headerlink" title="为什么HTTPS"></a>为什么HTTPS</h3><ul>
-<li>建立一个信息安全通道，来保证数据传输的安全</li>
-<li>确认网站的真实性，防止钓鱼网站</li>
-</ul>
-<h3 id="HTTPS原理"><a href="#HTTPS原理" class="headerlink" title="HTTPS原理"></a>HTTPS原理</h3><p>使用 RSA 的方法将加密算法的对称密钥发送过去，之后就可以使用使用这个密钥，利用对称密钥来通信了。就比如说我将钥匙放进了保险柜，然后将保险柜寄给对方。</p>
-<h3 id="中间人攻击"><a href="#中间人攻击" class="headerlink" title="中间人攻击"></a>中间人攻击</h3><p>有一个问题就是在使用非对称密钥的时候，首先需要将公钥给对方，那么在这个过程中，安全是没有保障的，中间人可以拦截到公钥，就可以对拦截到的公钥进行篡改。</p>
-<h3 id="确认身份-数字证书"><a href="#确认身份-数字证书" class="headerlink" title="确认身份-数字证书"></a>确认身份-数字证书</h3><ol>
-<li>发送方将公钥和信息通过Hash算法生成消息摘要，再用CA的私钥对信息摘要进行加密生成数字签名。</li>
-<li>数字签名和原始信息（包括公钥和信息）合在一起称为数字证书，只需将数字证书发送给对方就可以了。</li>
-<li>对方在拿到数字证书之后，就用同样的Hash算法，对原始信息再次生成消息摘要，然后用CA的公钥对数字签名解密，得到CA创建的消息摘要，两者一比，就知道有没有人篡改了！</li>
-</ol>
-<p>参考自这篇文章-&gt;<a href="https://juejin.im/post/59e4c02151882578d02f4aca" target="_blank" rel="noopener">https://juejin.im/post/59e4c02151882578d02f4aca</a></p>
-<h1 id="HTTPS加密的是哪部分数据？可以被拦截吗，可以看到哪部分数据？"><a href="#HTTPS加密的是哪部分数据？可以被拦截吗，可以看到哪部分数据？" class="headerlink" title="HTTPS加密的是哪部分数据？可以被拦截吗，可以看到哪部分数据？"></a>HTTPS加密的是哪部分数据？可以被拦截吗，可以看到哪部分数据？</h1><ul>
-<li>加密的是发送方的公钥和个人信息利用Hash算法生成的摘要。用CA的私钥把这个摘要加密成了数字签名。然后发送方发送这个数字签名和原始的公钥和个人信息。</li>
-<li>被拦截后就可以看到公钥和个人信息。</li>
-</ul>
+                <h1 id="Java深浅拷贝"><a href="#Java深浅拷贝" class="headerlink" title="Java深浅拷贝"></a>Java深浅拷贝</h1><h2 id="含义"><a href="#含义" class="headerlink" title="含义"></a>含义</h2><p>1、浅拷贝（同一个引用）：被复制对象的所有变量都含有与原来的对象相同的值，而所有的对其他对象的引用仍然指向原来的对象。换言之，浅复制仅仅复制所考虑的对象，而不复制它所引用的对象。</p>
+<p>2、深拷贝（新引用）：被复制对象的所有变量都含有与原来的对象相同的值，除去那些引用其他对象的变量。那些引用其他对象的变量将指向被复制过的新对象，而不再是原有的那些被引用的对象。换言之，深复制把要复制的对象所引用的对象都复制了一遍。</p>
+<h2 id="实现方式"><a href="#实现方式" class="headerlink" title="实现方式"></a>实现方式</h2><h3 id="浅拷贝"><a href="#浅拷贝" class="headerlink" title="浅拷贝"></a>浅拷贝</h3><p>使用Object类里的clone方法，如果想要使一个类的对象能够调用clone方法 ,则需要实现Cloneable接口, 并重写 clone方法。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Student</span> <span class="keyword">implements</span> <span class="title">Cloneable</span></span>&#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> sno ;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//getter ,setter 省略</span></span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Object <span class="title">clone</span><span class="params">()</span> <span class="keyword">throws</span> CloneNotSupportedException </span>&#123;</span><br><span class="line">        Student s = <span class="keyword">null</span>;</span><br><span class="line">        <span class="keyword">try</span>&#123;</span><br><span class="line">            s = (Student)<span class="keyword">super</span>.clone();</span><br><span class="line">        &#125;<span class="keyword">catch</span> (Exception e)&#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> s;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="深拷贝"><a href="#深拷贝" class="headerlink" title="深拷贝"></a>深拷贝</h3><p>利用序列化实现深拷贝</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//工具方法</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> Object <span class="title">cloneObject</span><span class="params">(Object object)</span> <span class="keyword">throws</span> IOException, ClassNotFoundException </span>&#123;</span><br><span class="line">        <span class="comment">//将对象序列化</span></span><br><span class="line">        ByteArrayOutputStream outputStream = <span class="keyword">new</span> ByteArrayOutputStream();</span><br><span class="line">        ObjectOutputStream objectOutputStream = <span class="keyword">new</span> ObjectOutputStream(outputStream);</span><br><span class="line">        objectOutputStream.writeObject(object);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//将字节反序列化</span></span><br><span class="line">        ByteArrayInputStream inputStream = <span class="keyword">new</span> ByteArrayInputStream(outputStream.toByteArray());</span><br><span class="line">        ObjectInputStream objectInputStream = <span class="keyword">new</span> ObjectInputStream(inputStream);</span><br><span class="line">        Object obj = objectInputStream.readObject();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> obj;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 
 
                 
