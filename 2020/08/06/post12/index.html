@@ -13,6 +13,14 @@
     
 
     
+        <meta name="description" content="UDP和TCP的区别概念UDPUDP的全称是User Datagram Protocol，用户数据报协议。他不需要握手操作，从而加快了通信速度，允许网络上的其他主机在接收方统一通信之前进行数据传输。
+
+数据报是与分组交换网络关联的传输单元。
+
+特点：
+
+UDP能够支持容忍数据包丢失的带宽密集型应用程">
+    
 
     <!--Author-->
     
@@ -21,10 +29,18 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="Hansyyy&#39;s Blog">
+        <meta property="og:title" content="UDP和TCP的区别">
     
 
     <!--Open Graph Description-->
+    
+        <meta property="og:description" content="UDP和TCP的区别概念UDPUDP的全称是User Datagram Protocol，用户数据报协议。他不需要握手操作，从而加快了通信速度，允许网络上的其他主机在接收方统一通信之前进行数据传输。
+
+数据报是与分组交换网络关联的传输单元。
+
+特点：
+
+UDP能够支持容忍数据包丢失的带宽密集型应用程">
     
 
     <!--Open Graph Site Name-->
@@ -32,7 +48,7 @@
 
     <!--Type page-->
     
-        <meta property="og:type" content="website">
+        <meta property="og:type" content="article">
     
 
     <!--Page Cover-->
@@ -51,7 +67,7 @@
 
     <!-- Title -->
     
-    <title>page - Archives - Hansyyy&#39;s Blog</title>
+    <title>UDP和TCP的区别 - Hansyyy&#39;s Blog</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
@@ -153,77 +169,146 @@
 </nav>
 
     <!-- Main Content -->
-    
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
 
-<!-- Page Header -->
-<!-- Set your background image for this header in the theme's configuration: index_cover -->
 <header class="intro-header" style="background-image: url('http://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/img/home-bg.jpg')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                    <h1>Archives</h1>
+                <div class="post-heading">
+                    <h1>UDP和TCP的区别</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2020-08-06
+                        
+                    </span>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/tags/UDP/">#UDP</a> <a href="/tags/TCP/">#TCP</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/categories/计算机网络/">计算机网络</a>
+
+                    
+                </div>
             
-                <div class="post-preview">
-    <a href="/2019/10/04/post3/">
-        <h1 class="post-title archive">
-            Linux基本命令总结
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2019-10-04
-    </p>
-</div>
+
+            <!-- Gallery -->
             
-                <div class="post-preview">
-    <a href="/2019/02/16/Myblog/">
-        <h1 class="post-title archive">
-            在MacOS X上使用GitHub和Hexo搭建博客
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2019-02-16
-    </p>
-</div>
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="UDP和TCP的区别"><a href="#UDP和TCP的区别" class="headerlink" title="UDP和TCP的区别"></a>UDP和TCP的区别</h1><h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><h3 id="UDP"><a href="#UDP" class="headerlink" title="UDP"></a>UDP</h3><p>UDP的全称是<code>User Datagram Protocol</code>，用户数据报协议。他不需要<code>握手</code>操作，从而加快了通信速度，允许网络上的其他主机在接收方统一通信之前进行数据传输。</p>
+<blockquote>
+<p>数据报是与分组交换网络关联的传输单元。</p>
+</blockquote>
+<p>特点：</p>
+<ol>
+<li>UDP能够支持容忍数据包丢失的带宽密集型应用程序</li>
+<li>UDP具有低延迟的特点</li>
+<li>UDP能够发送大量的数据包</li>
+<li>UDP能够允许DNS查找，DNS是建立在UDP之上的应用层协议</li>
+</ol>
+<h3 id="TCP"><a href="#TCP" class="headerlink" title="TCP"></a>TCP</h3><p>TCP的全称是<code>Transmission Control Protocol</code>，传输控制协议。它能够帮助你确定计算机连接到Internet以及它们之间的数据传输。通过三次握手来建立TCP连接，三次握手就是用来启动和确认TCP连接的过程。一旦连接建立后，就可以发送数据了，当数据传输完成后，会通过关闭虚拟电路来断开连接。</p>
+<p>特点：</p>
+<ol>
+<li>TCP能够确保连接的建立和数据包的发送</li>
+<li>TCP支持错误重传机制</li>
+<li>TCP支持拥塞控制，能够在网络拥堵的情况下延迟发送</li>
+<li>TCP能够提供错误校验和甄别有害的数据包</li>
+</ol>
+<h2 id="不同之处"><a href="#不同之处" class="headerlink" title="不同之处"></a>不同之处</h2><table>
+<thead>
+<tr>
+<th style="text-align:left">TCP</th>
+<th style="text-align:left">UDP</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">TCP是面向连接的协议</td>
+<td style="text-align:left">UDP是无连接的协议</td>
+</tr>
+<tr>
+<td style="text-align:left">TCP是发送数据前先需要建立连接，然后再发送数据</td>
+<td style="text-align:left">UDP无需建立连接就可以直接发送大量数据</td>
+</tr>
+<tr>
+<td style="text-align:left">TCP会按照特定顺序重新排列数据包</td>
+<td style="text-align:left">UDP数据报没有固定顺序，所有数据包都相互独立</td>
+</tr>
+<tr>
+<td style="text-align:left">TCP传输的速度比较慢</td>
+<td style="text-align:left">UDP传输会更快</td>
+</tr>
+<tr>
+<td style="text-align:left">TCP的头部字节有20字节</td>
+<td style="text-align:left">UDP的头部字节只需要8个字节</td>
+</tr>
+<tr>
+<td style="text-align:left">TCP是重量级的，在发送任何用户数据之前，TCP需要三次握手建立连接</td>
+<td style="text-align:left">UDP是轻量级的，没有跟踪连接、消息排序等</td>
+</tr>
+<tr>
+<td style="text-align:left">TCP会进行错误校验，并能进行错误恢复</td>
+<td style="text-align:left">UDP也会错误检查，但会丢失错误的数据包</td>
+</tr>
+<tr>
+<td style="text-align:left">TCP有发送确认</td>
+<td style="text-align:left">UDP没有发送确认</td>
+</tr>
+<tr>
+<td style="text-align:left">TCP会使用握手协议，如SYN、SYN-ACK、ACK</td>
+<td style="text-align:left">无握手协议</td>
+</tr>
+<tr>
+<td style="text-align:left">TCP是可靠的，因为它可以确保将数据传输到路由器</td>
+<td style="text-align:left">在UDP中不能保证将数据传送到目标</td>
+</tr>
+</tbody>
+</table>
+
+
+                
+            </div>
+
+            <!-- Comments -->
             
-                <div class="post-preview">
-    <a href="/2019/02/15/hello-world/">
-        <h1 class="post-title archive">
-            开启Hexo之旅！
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2019-02-15
-    </p>
-</div>
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
             
-            <div class="archive-before-pagination"></div>
-            <ul class="pager">
-    
-        <li class="previous"><a href="/archives/">&larr;  Newer Posts</a></li>
-    
-    
-</ul>
         </div>
     </div>
-</div>
-
+</article>
 
     <!-- Footer -->
     <hr>
