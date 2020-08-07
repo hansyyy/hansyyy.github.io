@@ -13,7 +13,34 @@
     
 
     
-        <meta name="description" content="怎么使用Hexo呢？">
+        <meta name="description" content="TCP的三次握手和四次挥手TCP三次握手
+
+
+消息类型
+描述
+
+
+
+
+SYN
+初始化和建立连接
+
+
+ACK
+帮助对方确认收到的SYN消息
+
+
+SYN-ACK
+本地的SYN消息和较早的ACK数据包
+
+
+FIN
+用来断开连接
+
+
+
+
+SYN：它的全称是Sychronize Sequence Number">
     
 
     <!--Author-->
@@ -23,12 +50,39 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="开启Hexo之旅！">
+        <meta property="og:title" content="TCP的三次握手和四次挥手">
     
 
     <!--Open Graph Description-->
     
-        <meta property="og:description" content="怎么使用Hexo呢？">
+        <meta property="og:description" content="TCP的三次握手和四次挥手TCP三次握手
+
+
+消息类型
+描述
+
+
+
+
+SYN
+初始化和建立连接
+
+
+ACK
+帮助对方确认收到的SYN消息
+
+
+SYN-ACK
+本地的SYN消息和较早的ACK数据包
+
+
+FIN
+用来断开连接
+
+
+
+
+SYN：它的全称是Sychronize Sequence Number">
     
 
     <!--Open Graph Site Name-->
@@ -55,7 +109,7 @@
 
     <!-- Title -->
     
-    <title>开启Hexo之旅！ - Hansyyy&#39;s Blog</title>
+    <title>TCP的三次握手和四次挥手 - Hansyyy&#39;s Blog</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
@@ -165,13 +219,13 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="post-heading">
-                    <h1>开启Hexo之旅！</h1>
+                    <h1>TCP的三次握手和四次挥手</h1>
                     
                     <span class="meta">
                         <!-- Date and Author -->
                         
                         
-                            2019-02-15
+                            2020-08-06
                         
                     </span>
                 </div>
@@ -192,7 +246,7 @@
                         
 
 
-<a href="/tags/Hexo/">#Hexo</a>
+<a href="/tags/TCP/">#TCP</a>
 
 
                     
@@ -201,7 +255,7 @@
                     
                         
 
-<a href="/categories/Hexo/">Hexo</a>
+<a href="/categories/计算机网络/">计算机网络</a>
 
                     
                 </div>
@@ -212,12 +266,60 @@
 
             <!-- Post Main Content -->
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <h2 id="怎么使用Hexo呢？"><a href="#怎么使用Hexo呢？" class="headerlink" title="怎么使用Hexo呢？"></a>怎么使用Hexo呢？</h2><a id="more"></a>
-<h3 id="Start-a-new-post"><a href="#Start-a-new-post" class="headerlink" title="Start a new post"></a>Start a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>最后就OK啦！</p>
+                <h1 id="TCP的三次握手和四次挥手"><a href="#TCP的三次握手和四次挥手" class="headerlink" title="TCP的三次握手和四次挥手"></a>TCP的三次握手和四次挥手</h1><h2 id="TCP三次握手"><a href="#TCP三次握手" class="headerlink" title="TCP三次握手"></a>TCP三次握手</h2><table>
+<thead>
+<tr>
+<th>消息类型</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SYN</td>
+<td>初始化和建立连接</td>
+</tr>
+<tr>
+<td>ACK</td>
+<td>帮助对方确认收到的SYN消息</td>
+</tr>
+<tr>
+<td>SYN-ACK</td>
+<td>本地的SYN消息和较早的ACK数据包</td>
+</tr>
+<tr>
+<td>FIN</td>
+<td>用来断开连接</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>SYN：它的全称是<code>Sychronize Sequence Numbers</code>,同步序列编号，是TCP/IP建立连接时使用的握手信号。在客户机和服务器之间建立TCP连接时，首先会发送的一个信号。客户端在接收到SYN消息时，就会在自己的段内生成一个随机值X。</li>
+<li>SYN-ACK：服务器收到SYN后，打开客户端连接，发送一个SYN-ACK作为答复。确认号设置为比接收到的序列号多一个，即X+1，服务器为数据包选择的序列号是另一个随机数Y。</li>
+<li>ACK：<code>Acknowledge Character</code>，确认字符。表示发来的数据已确认接收无误。最后客户端将ACK发送给服务器。序列号被设置为所接受的确认值即Y+1。</li>
+</ul>
+<p>整个过程为：客户端发送一个<code>SYN(SequenceNum=x)</code>给服务器即建立连接，服务器接收到SYN后，发送<code>ACK(AcknowledgeNum=x+1)</code>和服务器自己再生成的一个<code>SYN(SequenceNum=y)</code>一并发送给客户端作为响应请求，最后客户端发送<code>ACK(AcknowledgeNum=y+1)</code>给服务器，即连接确认。</p>
+<h2 id="TCP四次挥手"><a href="#TCP四次挥手" class="headerlink" title="TCP四次挥手"></a>TCP四次挥手</h2><p>在连接终止阶段使用四次挥手，连接的每一端都会独立的终止。</p>
+<ul>
+<li>首先，客户端决定要终止连接（服务端也可），这会使客户端将<code>FIN</code>发送到服务器，并进入<code>FIN_WAIT_1</code>状态，等待服务器的<code>ACK</code>响应。</li>
+<li>当服务器收到<code>FIN</code> 消息时，服务器会立刻向客户端发送<code>ACK</code> 确认消息。</li>
+<li>当客户端收到服务器发送的 <code>ACK</code> 响应后，客户端就进入 <code>FIN_WAIT_2</code> 状态，然后等待来自服务器的 <code>FIN</code> 消息。</li>
+<li>服务器发送<code>ACK</code> 确认消息后，一段时间（可以进行关闭后）会发送<code>FIN</code> 消息给客户端，告知客户端可以进行关闭。</li>
+<li>当客户端收到从服务端发送的 FIN 消息时，客户端就会由<code>FIN_WAIT_2</code> 状态变为 <code>TIME_WAIT</code> 状态。处于 <code>TIME_WAIT</code> 状态的客户端允许重新发送<code>ACK</code> 到服务器为了防止信息丢失。客户端在 <code>TIME_WAIT</code> 状态下花费的时间取决于它的实现，在等待一段时间后，连接关闭，客户端上所有的资源（包括端口号和缓冲区数据）都被释放。</li>
+</ul>
+<h2 id="现实举例"><a href="#现实举例" class="headerlink" title="现实举例"></a>现实举例</h2><p>小明 - 客户端 小红 - 服务端</p>
+<p>三次握手：</p>
+<ul>
+<li>小明给小红打电话，接通了后，小明说<strong>喂，能听到吗</strong>，这就相当于是连接建立。</li>
+<li>小红给小明回应，<strong>能听到，你能听到我说的话吗</strong>，这就相当于是请求响应。</li>
+<li>小明听到小红的回应后，<strong>好的</strong>，这相当于是连接确认。在这之后小明和小红就可以通话/交换信息了。</li>
+</ul>
+<p>四次挥手：</p>
+<ul>
+<li>小明对小红说，<strong>我所有的东西都说完了，我要挂电话了</strong>。</li>
+<li>小红说，<strong>收到，我这边还有一些东西没说</strong>。</li>
+<li>经过若干秒后，小红也说完了，小红说，<strong>我说完了，现在可以挂断了</strong>。</li>
+<li>小明收到消息后，又等了若干时间后，挂断了电话。</li>
+</ul>
 
 
                 
