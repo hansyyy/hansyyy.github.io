@@ -220,8 +220,8 @@ Spr">
 
             <!-- Post Main Content -->
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <h1 id="Spring框架"><a href="#Spring框架" class="headerlink" title="Spring框架"></a>Spring框架</h1><p>Spring是一个从实际开发中抽取出来的框架，它完成了大量开发中的通用步骤，留给开发者的仅仅是与特定应用相关的部分，大大提高了企业应用的开发效率。</p>
-<h2 id="Spring框架的核心功能"><a href="#Spring框架的核心功能" class="headerlink" title="Spring框架的核心功能"></a>Spring框架的核心功能</h2><ol>
+                <h1><span id="spring框架">Spring框架</span></h1><p>Spring是一个从实际开发中抽取出来的框架，它完成了大量开发中的通用步骤，留给开发者的仅仅是与特定应用相关的部分，大大提高了企业应用的开发效率。</p>
+<h2><span id="spring框架的核心功能">Spring框架的核心功能</span></h2><ol>
 <li><p>Spring容器作为超级大工厂，负责创建、管理所有的Java对象，这些Java对象被称为Bean。</p>
 </li>
 <li><p>Spring容器管理容器中的Bean之间的依赖关系，Spring使用一种被称为“依赖注入”的方式来管理Bean之间的依赖关系。</p>
@@ -232,7 +232,7 @@ Spr">
 <li>ClassPathXmlApplicationContext: 从类加载路径下搜索配置文件，并根据配置文件来创建Spring容器。</li>
 <li>FileSystemXmlApplicationContext: 从文件系统的相对路径或绝对路径下去搜索配置文件，并根据配置文件来创建Spring容器。</li>
 </ul>
-<h2 id="依赖注入"><a href="#依赖注入" class="headerlink" title="依赖注入"></a>依赖注入</h2><p>依赖注入（Dependency Injection，DI）即为控制反转（Inverse of Control，IoC）。</p>
+<h2><span id="依赖注入">依赖注入</span></h2><p>依赖注入（Dependency Injection，DI）即为控制反转（Inverse of Control，IoC）。</p>
 <p>当某个Java对象（调用者）需要调用另一个Java对象（被依赖对象）的方法时，在传统模式下通常有两种做法：</p>
 <ol>
 <li>原始做法: 调用者<strong>主动</strong>创建被依赖对象，然后再调用被依赖对象的方法。</li>
@@ -240,10 +240,10 @@ Spr">
 </ol>
 <p>使用Spring框架之后，调用者无需<strong>主动</strong>获取被依赖对象，调用者只要<strong>被动</strong>接受Spring容器为调用者的成员变量赋值即可，由此可见，使用Spring后，调用者获取被依赖对象的方式由原来的主动获取，变成了被动接受所以称之为<strong>控制反转</strong>。</p>
 <p>另外从Spring容器的角度来看，Spring容器负责将被依赖对象赋值给调用者的成员变量——相当于为调用者注入它依赖的实例，因此称之为<strong>依赖注入</strong>。</p>
-<h4 id="设值注入"><a href="#设值注入" class="headerlink" title="设值注入"></a>设值注入</h4><p>设值注入是指IoC容器通过成员变量的setter方法来注入被依赖对象。这种注入方式简单、直观，因而在Spring的依赖注入里大量使用。</p>
-<h4 id="构造注入"><a href="#构造注入" class="headerlink" title="构造注入"></a>构造注入</h4><p>利用构造器来设置依赖关系的方式，被称为构造注入。通俗来说，就是驱动Spring在底层以反射方式执行带指定参数的构造器，当执行带参数的构造器时，就可利用构造器参数对成员变量执行初始化——这就是构造注入的本质。</p>
-<h2 id="Bean"><a href="#Bean" class="headerlink" title="Bean"></a>Bean</h2><p>开发者使用Spring框架主要是做两件事：①开发Bean；②配置Bean。对于Spring框架来说，它要做的就是根据配置文件来创建Bean实例，并调用Bean实例的方法完成”依赖注入”。</p>
-<h3 id="Bean的作用域"><a href="#Bean的作用域" class="headerlink" title="Bean的作用域"></a>Bean的作用域</h3><ol>
+<h4><span id="设值注入">设值注入</span></h4><p>设值注入是指IoC容器通过成员变量的setter方法来注入被依赖对象。这种注入方式简单、直观，因而在Spring的依赖注入里大量使用。</p>
+<h4><span id="构造注入">构造注入</span></h4><p>利用构造器来设置依赖关系的方式，被称为构造注入。通俗来说，就是驱动Spring在底层以反射方式执行带指定参数的构造器，当执行带参数的构造器时，就可利用构造器参数对成员变量执行初始化——这就是构造注入的本质。</p>
+<h2><span id="bean">Bean</span></h2><p>开发者使用Spring框架主要是做两件事：①开发Bean；②配置Bean。对于Spring框架来说，它要做的就是根据配置文件来创建Bean实例，并调用Bean实例的方法完成”依赖注入”。</p>
+<h3><span id="bean的作用域">Bean的作用域</span></h3><ol>
 <li>singleton: <strong>单例模式</strong>，在整个Spring IoC容器中，singleton作用域的Bean将只生成一个实例。</li>
 <li>prototype: 每次通过容器的getBean()方法获取prototype作用域的Bean时，都将产生一个新的Bean实例。</li>
 <li>request: 对于<strong>一次HTTP请求</strong>，request作用域的Bean将只生成一个实例，这意味着，在同一次HTTP请求内，程序每次请求该Bean，得到的总是同一个实例。只有在Web应用中使用Spring时，该作用域才真正有效。</li>
@@ -251,19 +251,19 @@ Spr">
 <li>global session: 每个<strong>全局的HTTP Session</strong>对应一个Bean实例。在典型的情况下，仅在使用portlet context的时候有效，同样只在Web应用中有效。</li>
 </ol>
 <p>Spring默认使用singleton作用域。prototype作用域的Bean的创建、销毁代价比较大。而singleton作用域的Bean实例一旦创建成果，就可以重复使用。因此，应该尽量避免将Bean设置成prototype作用域。</p>
-<h3 id="创建Bean的方式"><a href="#创建Bean的方式" class="headerlink" title="创建Bean的方式"></a>创建Bean的方式</h3><h4 id="1-使用构造器创建Bean"><a href="#1-使用构造器创建Bean" class="headerlink" title="1.使用构造器创建Bean"></a>1.使用构造器创建Bean</h4><p>使用构造器来创建Bean实例是最常见的情况，如果不采用构造注入，Spring底层会调用Bean类的无参数构造器来创建实例，因此要求该Bean类提供无参数的构造器。</p>
+<h3><span id="创建bean的方式">创建Bean的方式</span></h3><h4><span id="1使用构造器创建bean">1.使用构造器创建Bean</span></h4><p>使用构造器来创建Bean实例是最常见的情况，如果不采用构造注入，Spring底层会调用Bean类的无参数构造器来创建实例，因此要求该Bean类提供无参数的构造器。</p>
 <p>采用默认的构造器创建Bean实例，Spring对Bean实例的所有属性执行默认初始化.</p>
-<h4 id="2-使用静态工厂方法创建Bean"><a href="#2-使用静态工厂方法创建Bean" class="headerlink" title="2.使用静态工厂方法创建Bean"></a>2.使用静态工厂方法创建Bean</h4><p>使用静态工厂方法创建Bean实例时，class属性也必须指定，但此时class属性并不是指定Bean实例的实现类，而是静态工厂类，Spring通过该属性知道由哪个工厂类来创建Bean实例。</p>
+<h4><span id="2使用静态工厂方法创建bean">2.使用静态工厂方法创建Bean</span></h4><p>使用静态工厂方法创建Bean实例时，class属性也必须指定，但此时class属性并不是指定Bean实例的实现类，而是静态工厂类，Spring通过该属性知道由哪个工厂类来创建Bean实例。</p>
 <p>除此之外，还需要使用factory-method属性来指定静态工厂方法，Spring将调用静态工厂方法返回一个Bean实例，一旦获得了指定Bean实例，Spring后面的处理步骤与采用普通方法创建Bean实例完全一样。如果静态工厂方法需要参数，则使用<code>&lt;constructor-arg.../&gt;</code>元素指定静态工厂方法的参数。</p>
-<h4 id="3-调用实例工厂方法创建Bean"><a href="#3-调用实例工厂方法创建Bean" class="headerlink" title="3.调用实例工厂方法创建Bean"></a>3.调用实例工厂方法创建Bean</h4><p>实例工厂方法与静态工厂方法只有一个不同：调用静态工厂方法只需使用工厂类即可，而调用实例工厂方法则需要工厂实例。使用实例工厂方法时，配置Bean实例的<code>&lt;bean.../&gt;</code>元素无须class属性，配置实例工厂方法使用<code>factory-bean</code>指定工厂实例。<br>采用实例工厂方法创建Bean的<code>&lt;bean.../&gt;</code>元素时需要指定如下两个属性：</p>
+<h4><span id="3调用实例工厂方法创建bean">3.调用实例工厂方法创建Bean</span></h4><p>实例工厂方法与静态工厂方法只有一个不同：调用静态工厂方法只需使用工厂类即可，而调用实例工厂方法则需要工厂实例。使用实例工厂方法时，配置Bean实例的<code>&lt;bean.../&gt;</code>元素无须class属性，配置实例工厂方法使用<code>factory-bean</code>指定工厂实例。<br>采用实例工厂方法创建Bean的<code>&lt;bean.../&gt;</code>元素时需要指定如下两个属性：</p>
 <ul>
 <li>factory-bean: 该属性的值为工厂Bean的id。</li>
 <li>factory-method: 该属性指定实例工厂的工厂方法。</li>
 </ul>
 <p>若调用实例工厂方法时需要传入参数，则使用<code>&lt;constructor-arg.../&gt;</code>元素确定参数值。</p>
-<h3 id="使用自动装配注入合作者Bean"><a href="#使用自动装配注入合作者Bean" class="headerlink" title="使用自动装配注入合作者Bean"></a>使用自动装配注入合作者Bean</h3><p>Spring能自动装配Bean与Bean之间的依赖关系，即无须使用ref显式指定依赖Bean，而是由Spring容器检查XML配置文件内容，根据某种规则，为调用者Bean注入被依赖的Bean。<br>Spring自动装配可通过<code>&lt;beans/&gt;</code>元素的<code>default-autowire</code>属性指定，该属性对配置文件中<strong>所有</strong>的Bean起作用；也可通过对<code>&lt;bean/&gt;</code>元素的<code>autowire</code>属性指定，该属性只对<strong>该Bean</strong>起作用。</p>
+<h3><span id="使用自动装配注入合作者bean">使用自动装配注入合作者Bean</span></h3><p>Spring能自动装配Bean与Bean之间的依赖关系，即无须使用ref显式指定依赖Bean，而是由Spring容器检查XML配置文件内容，根据某种规则，为调用者Bean注入被依赖的Bean。<br>Spring自动装配可通过<code>&lt;beans/&gt;</code>元素的<code>default-autowire</code>属性指定，该属性对配置文件中<strong>所有</strong>的Bean起作用；也可通过对<code>&lt;bean/&gt;</code>元素的<code>autowire</code>属性指定，该属性只对<strong>该Bean</strong>起作用。</p>
 <p>当一个Bean既使用自动装配依赖，又使用ref显式指定依赖时，则显式指定的依赖覆盖自动装配依赖；对于大型的应用，不鼓励使用自动装配。虽然使用自动装配可减少配置文件的工作量，但大大将死了依赖关系的清晰性和透明性。依赖关系的装配依赖于源文件的属性名和属性类型，导致Bean与Bean之间的耦合降低到代码层次，不利于高层次解耦。</p>
-<h3 id="协调作用域不同步的Bean"><a href="#协调作用域不同步的Bean" class="headerlink" title="协调作用域不同步的Bean"></a>协调作用域不同步的Bean</h3><p>当singleton作用域的Bean依赖于prototype作用域的Bean时，会产生不同步的现象，原因是因为当Spring容器初始化时，容器会预初始化容器中所有的<code>singleton Bean</code>，由于<code>singleton Bean</code>依赖于<code>prototype Bean</code>，因此Spring在初始化<code>singleton Bean</code>之前，会先创建<code>prototypeBean</code>——然后才创建<code>singleton Bean</code>，接下里将<code>prototype Bean</code>注入<code>singleton Bean</code>。<br>解决不同步的方法有两种：</p>
+<h3><span id="协调作用域不同步的bean">协调作用域不同步的Bean</span></h3><p>当singleton作用域的Bean依赖于prototype作用域的Bean时，会产生不同步的现象，原因是因为当Spring容器初始化时，容器会预初始化容器中所有的<code>singleton Bean</code>，由于<code>singleton Bean</code>依赖于<code>prototype Bean</code>，因此Spring在初始化<code>singleton Bean</code>之前，会先创建<code>prototypeBean</code>——然后才创建<code>singleton Bean</code>，接下里将<code>prototype Bean</code>注入<code>singleton Bean</code>。<br>解决不同步的方法有两种：</p>
 <ul>
 <li>放弃依赖注入: singleton作用域的Bean每次需要prototype作用域的Bean时，主动向容器请求新的Bean实例，即可保证每次注入的<code>prototype Bean</code>实例都是最新的实例。</li>
 <li>利用方法注入: 方法注入通常使用<strong>lookup</strong>方法注入，使用lookup方法注入可以让Spring容器重写容器中Bean的抽象或具体方法，返回查找容器中其他Bean的结果，被查找的Bean通常是一个<code>non-singleton Bean</code>。Spring通过使用JDK动态代理或cglib库修改客户端的二进制码，从而实现上述要求。</li>
@@ -273,13 +273,13 @@ Spr">
 <li>将调用者Bean的实现类定义为抽象类，并定义一个抽象方法来获取被依赖的Bean。</li>
 <li>在<code>&lt;bean.../&gt;</code>元素中添加<code>&lt;lookup-method.../&gt;</code>子元素让Spring为调用者Bean的实现类实现指定的抽象方法。</li>
 </ol>
-<h2 id="两种后处理器"><a href="#两种后处理器" class="headerlink" title="两种后处理器"></a>两种后处理器</h2><h3 id="Bean后处理器"><a href="#Bean后处理器" class="headerlink" title="Bean后处理器"></a>Bean后处理器</h3><p>Bean后处理器是一种特殊的Bean，它不需要提供服务，甚至无需id属性，主要对容器里的其他Bean执行后处理，对Bean进行额外加强。实现BeanPostProcessor接口以及该接口里的两个方法。</p>
+<h2><span id="两种后处理器">两种后处理器</span></h2><h3><span id="bean后处理器">Bean后处理器</span></h3><p>Bean后处理器是一种特殊的Bean，它不需要提供服务，甚至无需id属性，主要对容器里的其他Bean执行后处理，对Bean进行额外加强。实现BeanPostProcessor接口以及该接口里的两个方法。</p>
 <ol>
 <li><code>Object postProcessBeforeInitialization(Object bean, String name) throws BeansException</code>: 该方法的第一个参数是系统即将进行后处理的Bean实例，第二个参数是该Bean的配置id</li>
 <li><code>Object postProcessAfterinitialization(Object bean, String name) throws BeansException</code>: 该方法的第一个参数是系统即将进行后处理的Bean实例，第二个参数是该Bean的配置id</li>
 </ol>
 <p>如果使用<code>BeanFactory</code>作为Spring容器，则必须手动注册Bean后处理器，程序必须获取Bean后处理器实例，然后手动注册。</p>
-<h3 id="容器后处理器"><a href="#容器后处理器" class="headerlink" title="容器后处理器"></a>容器后处理器</h3><p>Bean后处理器负责处理容器中的所有Bean实例，而容器后处理器则负责处理容器本身。容器后处理器必须实现<code>BeanFactoryPostProcessor</code>接口，并实现该接口的一个方法<code>postProcessBeanFactory(ConfigurableListableBeanFactory beanFactory)</code>实现该方法的方法体就是对Spring容器进行的处理，这种处理可以对Spring容器进行自定义扩展，当然也可以对Spring容器不进行任何处理。</p>
+<h3><span id="容器后处理器">容器后处理器</span></h3><p>Bean后处理器负责处理容器中的所有Bean实例，而容器后处理器则负责处理容器本身。容器后处理器必须实现<code>BeanFactoryPostProcessor</code>接口，并实现该接口的一个方法<code>postProcessBeanFactory(ConfigurableListableBeanFactory beanFactory)</code>实现该方法的方法体就是对Spring容器进行的处理，这种处理可以对Spring容器进行自定义扩展，当然也可以对Spring容器不进行任何处理。</p>
 <p>类似于<code>BeanPostProcessor</code>，<code>ApplicationContext</code>可自动检测到容器中的容器后处理器，并且自动注册容器后处理器。但若使用<code>BeanFactory</code>作为Spring容器，则必须手动调用该容器后处理器来处理<code>BeanFactory</code>容器。</p>
 
 
@@ -297,6 +297,7 @@ Spr">
         </div>
     </div>
 </article>
+
 
     <!-- Footer -->
     <hr>
@@ -362,6 +363,7 @@ Spr">
 <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
 <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
 <script type="text/javascript" src="/js/fireworks.js"></script>
+
 </body>
 
 </html>

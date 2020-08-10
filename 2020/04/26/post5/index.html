@@ -216,13 +216,13 @@
 
             <!-- Post Main Content -->
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <h1 id="Hexo个人博客绑定域名"><a href="#Hexo个人博客绑定域名" class="headerlink" title="Hexo个人博客绑定域名"></a>Hexo个人博客绑定域名</h1><p>因为使用userName.github.io访问个人博客访问速度较慢，所以可以试着用自己的域名作为访问域名。以下是更改步骤：</p>
-<h2 id="1-申请个人域名"><a href="#1-申请个人域名" class="headerlink" title="1.申请个人域名"></a>1.申请个人域名</h2><p>首先去申请（买）一个个人域名，我是在腾讯云买的，你可以根据个人喜好在阿里云等等相关网站买到。</p>
-<h2 id="2-DNS修改"><a href="#2-DNS修改" class="headerlink" title="2.DNS修改"></a>2.<code>DNS</code>修改</h2><p>在你所买域名的平台里打开域名控制台找到DNS修改，一般都有默认的域名DNS，如果没有，请添加：<code>dns29.hichina.com</code>和<code>dns30.hichina.com</code></p>
-<h2 id="3-添加DNS解析"><a href="#3-添加DNS解析" class="headerlink" title="3.添加DNS解析"></a>3.添加<code>DNS</code>解析</h2><p>在terminal<code>ping</code>你的userName.github.io，得到你的IP值，然后用这个IP值，给域名的DNS解析添加一个 <code>A记录</code>，主机记录为<code>@</code>，然后再添加一个 <code>GNAME记录</code> 主机地址填的是我们原本用来访问github博客的地址：<code>userName.github.io</code>，主机记录为<code>www</code></p>
-<h2 id="4-创建GNAME文件"><a href="#4-创建GNAME文件" class="headerlink" title="4.创建GNAME文件"></a>4.创建<code>GNAME</code>文件</h2><p>在hexo本地目录 <code>source</code> 目录下面新建一个文件，取名为 <code>GNAME</code> (无后缀！！！)，内容就是上面所说到的自己的域名，并运行hexo指令使之生效。</p>
+                <h1><span id="hexo个人博客绑定域名">Hexo个人博客绑定域名</span></h1><p>因为使用userName.github.io访问个人博客访问速度较慢，所以可以试着用自己的域名作为访问域名。以下是更改步骤：</p>
+<h2><span id="1申请个人域名">1.申请个人域名</span></h2><p>首先去申请（买）一个个人域名，我是在腾讯云买的，你可以根据个人喜好在阿里云等等相关网站买到。</p>
+<h2><span id="2dns修改">2.<code>DNS</code>修改</span></h2><p>在你所买域名的平台里打开域名控制台找到DNS修改，一般都有默认的域名DNS，如果没有，请添加：<code>dns29.hichina.com</code>和<code>dns30.hichina.com</code></p>
+<h2><span id="3添加dns解析">3.添加<code>DNS</code>解析</span></h2><p>在terminal<code>ping</code>你的userName.github.io，得到你的IP值，然后用这个IP值，给域名的DNS解析添加一个 <code>A记录</code>，主机记录为<code>@</code>，然后再添加一个 <code>GNAME记录</code> 主机地址填的是我们原本用来访问github博客的地址：<code>userName.github.io</code>，主机记录为<code>www</code></p>
+<h2><span id="4创建gname文件">4.创建<code>GNAME</code>文件</span></h2><p>在hexo本地目录 <code>source</code> 目录下面新建一个文件，取名为 <code>GNAME</code> (无后缀！！！)，内容就是上面所说到的自己的域名，并运行hexo指令使之生效。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-<h2 id="5-域名绑定"><a href="#5-域名绑定" class="headerlink" title="5.域名绑定"></a>5.域名绑定</h2><p>打开博客在Github中的地址，然后切换到 <code>Settings</code>页，设置<code>Custom domain</code>内容为我们自己的域名值（例如：我的域名是seafog.top），点击<code>Save</code>按钮保存，就可以正常访问啦～</p>
+<h2><span id="5域名绑定">5.域名绑定</span></h2><p>打开博客在Github中的地址，然后切换到 <code>Settings</code>页，设置<code>Custom domain</code>内容为我们自己的域名值（例如：我的域名是seafog.top），点击<code>Save</code>按钮保存，就可以正常访问啦～</p>
 
 
                 
@@ -239,6 +239,7 @@
         </div>
     </div>
 </article>
+
 
     <!-- Footer -->
     <hr>
@@ -304,6 +305,7 @@
 <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
 <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
 <script type="text/javascript" src="/js/fireworks.js"></script>
+
 </body>
 
 </html>

@@ -196,7 +196,7 @@
                         
 
 
-<a href="/tags/TCP/">#TCP</a> <a href="/tags/HTTP/">#HTTP</a> <a href="/tags/DNS/">#DNS</a>
+<a href="/tags/HTTP/">#HTTP</a> <a href="/tags/TCP/">#TCP</a> <a href="/tags/DNS/">#DNS</a>
 
 
                     
@@ -216,7 +216,7 @@
 
             <!-- Post Main Content -->
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <h1 id="键入URL后，期间发生了什么？"><a href="#键入URL后，期间发生了什么？" class="headerlink" title="键入URL后，期间发生了什么？"></a>键入URL后，期间发生了什么？</h1><ul>
+                <h1><span id="键入url后期间发生了什么">键入URL后，期间发生了什么？</span></h1><ul>
 <li>首先在浏览器的地址栏键入你想访问的地址。</li>
 <li>然后，浏览器会根据你输入的URL去查找域名是否被本地DNS缓存，不同浏览器对 DNS 的设置不同，如果浏览器缓存了你想访问的 URL 地址，那就直接返回 ip。如果没有缓存你的 URL 地址，浏览器就会发起系统调用来查询本机 <code>hosts</code> 文件是否有配置 ip 地址，如果找到，直接返回。如果找不到，就向网络中发起一个 DNS 查询。在由根域名服务器 -&gt; 顶级域名服务器 -&gt; 权威 DNS 服务器后，由权威服务器告诉本地服务器目标 IP 地址，再有本地 DNS 服务器告诉用户需要访问的 IP 地址。</li>
 <li>第三步，浏览器需要和目标服务器建立 TCP 连接，需要经过三次握手的过程。</li>
@@ -240,6 +240,7 @@
         </div>
     </div>
 </article>
+
 
     <!-- Footer -->
     <hr>
@@ -305,6 +306,7 @@
 <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
 <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
 <script type="text/javascript" src="/js/fireworks.js"></script>
+
 </body>
 
 </html>
