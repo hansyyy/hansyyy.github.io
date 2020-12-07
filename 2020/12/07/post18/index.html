@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ZN-CH">
+
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.8.0">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="Java集合框架1 概述
+
+集合可以看作是一种容器，用来存储对象信息，所有集合类都位于java.util包下，但是支持多线程的集合位于java.util.concurrent包下。Java集合类主要是由两个根接口派生出来的：Collection和Map。Collection派生出三个子接口：List">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="hansyyy">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Java集合框架">
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Java集合框架1 概述
+
+集合可以看作是一种容器，用来存储对象信息，所有集合类都位于java.util包下，但是支持多线程的集合位于java.util.concurrent包下。Java集合类主要是由两个根接口派生出来的：Collection和Map。Collection派生出三个子接口：List">
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Hansyyy&#39;s Blog">
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article">
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="http://yoursite.comhttp://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/img/home-bg.jpg">
+    
+
+        <meta name="twitter:card" content="summary_large_image">
+
+    
+
+    
+        <meta name="twitter:image" content="http://yoursite.comhttp://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/img/home-bg.jpg">
+    
+
+    <!-- Title -->
+    
+    <title>Java集合框架 - Hansyyy&#39;s Blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet">
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+</head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Hansyyy's Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://github.com/hansyyy">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('http://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/img/home-bg.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Java集合框架</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2020-12-07
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/tags/集合框架/">#集合框架</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/categories/java/">java</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1><span id="java集合框架">Java集合框架</span></h1><h2><span id="1-概述">1 概述</span></h2><p><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glczzvxdsfj30la09v75d.jpg" alt="img"></p>
+<p><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gld006v5hhj30j906raam.jpg" alt="img"></p>
+<p>集合可以看作是一种容器，用来存储对象信息，所有集合类都位于java.util包下，但是支持多线程的集合位于java.util.concurrent包下。Java集合类主要是由两个根接口派生出来的：Collection和Map。Collection派生出三个子接口：List、Set、Queue。所以Java集合可以大致分成<strong>List、Set、Queue、Map</strong>四种接口体系。</p>
+<h2><span id="2-数组与集合的区别">2 数组与集合的区别</span></h2><ol>
+<li>数组长度不可变化而且无法存储具有映射关系的数据；集合类用于保存数量不确定的数据，以及具有映射关系的数据。</li>
+<li>数组元素既可以是基本类型的值也可以是对象，而集合只能保存对象。</li>
+</ol>
+<h2><span id="3-list">3 List</span></h2><p>List代表有序可重复集合，可以根据元素索引直接访问，List和数组类似，可以动态增长，根据实际存储的数据长度自动增长长度，查找效率高，插入删除效率低。</p>
+<h3><span id="31-arraylist">3.1 ArrayList</span></h3><p>ArrayList是一个<strong>动态数组</strong>，也是我们最常用的集合，是List类的典型实现。它允许任何符合规则的元素插入甚至包括null。每一个ArrayList都有一个<strong>初始容量<code>10</code></strong>，该容量代表了数组的大小。随着容器中的元素不断增加，容器的大小也会随着增加。在每次向容器中增加元素的同时都会进行容量检查，当快溢出时，就会进行扩容操作。所以如果我们明确所插入元素的多少，最好指定一个初始容量值，避免过多的进行扩容操作而浪费时间、效率。但是ArrayList是<strong>非同步</strong>的。</p>
+<h3><span id="32-linkedlist">3.2 LinkedList</span></h3><p>LinkedList是List接口的另一个实现，除了可以根据索引访问集合元素外，LinkedList还实现了Deque接口，可以当作双端队列来使用，也就是说，既可以当作“栈”使用，又可以当作队列使用。</p>
+<p>LinkedList的实现机制与ArrayList的实现机制完全不同，ArrayList内部以<strong>数组</strong>的形式保存集合的元素，所以<strong>随机访问</strong>集合元素有较好的性能；LinkedList内部以<strong>链表</strong>的形式保存集合中的元素，所以随机访问集合中的元素性能较差，但在<strong>插入删除</strong>元素时有较好的性能。</p>
+<h3><span id="33-vector">3.3 Vector</span></h3><p>与ArrayList相似，但是Vector是<strong>同步</strong>的。所以说Vector是<strong>线程安全</strong>的动态数组。它的操作与ArrayList几乎一样。</p>
+<h3><span id="34-stack">3.4 Stack</span></h3><p>Stack继承自Vector，实现一个后进先出(LIFO)的<strong>堆栈</strong>。Stack提供5个额外的方法使得Vector得以被当作堆栈使用。基本的<code>push</code>和<code>pop</code> 方法，还有<code>peek</code>方法得到栈顶的元素，<code>empty</code>方法测试堆栈是否为空，<code>search</code>方法检测一个元素在堆栈中的位置。Stack刚创建后是<strong>空栈</strong>。</p>
+<h2><span id="4-set">4 Set</span></h2><p>Set是<strong>无序不可重复</strong>集合，可以通过元素本身访问。Set集合与Collection的方法相同，由于Set集合不允许存储相同的元素，所以如果把两个相同元素添加到同一个Set集合，则添加操作失败，新元素不会被加入，add()方法返回false。</p>
+<h3><span id="41-hashset">4.1 HashSet</span></h3><p>HashSet是按照hash算法来存储元素的，因此具有很好的存取和查找性能。</p>
+<p><strong>HashSet具有如下特点：</strong></p>
+<p>♦ 不能保证元素的顺序。</p>
+<p>♦ HashSet不是线程同步的，如果多线程操作HashSet集合，则应通过代码来保证其同步。</p>
+<p>♦ 集合元素值可以是null。</p>
+<p><strong>HashSet存储原理如下：</strong></p>
+<p>当向HashSet集合存储一个元素时，HashSet会调用该对象的hashCode()方法得到其hashCode值，然后根据hashCode值决定该对象的存储位置。根据这个hashCode值定位到对应的物理位置，若该位置没有存储元素，则将元素添加到此位置上；若该位置已经存储了元素，则调用equals()方法，比较该元素是否与新元素相等，若相等则不会添加新元素，若不相等HashSet会以链式结构将两个对象保存在同一位置，这将导致性能下降，因此在编码时应避免出现这种情况。</p>
+<p><strong>HashSet查找原理如下：</strong></p>
+<p>基于HashSet以上的存储原理，在查找元素时，HashSet先计算元素的HashCode值（也就是调用对象的hashCode方法的返回值），然后直接到hashCode值对应的位置去取出元素即可，这就是HashSet速度很快的原因。</p>
+<p><strong>重写hashCode()方法的基本原则如下：</strong></p>
+<p>♦ 在程序运行过程中，同一个对象的hashCode()方法返回值应相同。</p>
+<p>♦ 当两个对象通过equals()方法比较返回true时，这两个对象的hashCode()方法返回值应该相等。</p>
+<p>♦ 对象中用作equals()方法比较标准的实例变量，都应该用于计算hashCode值。</p>
+<h3><span id="42-linkedhashset">4.2 LinkedHashSet</span></h3><p>LinkedHashSet是HashSet的一个子类，具有HashSet的特性，也是根据元素的hashCode值来决定元素的存储位置。但它使用<strong>链表</strong>维护元素的次序，元素的顺序与添加顺序一致。由于LinkedHashSet需要维护元素的插入顺序，因此性能略低于HashSet，但在<strong>迭代访问</strong>Set里的全部元素时由很好的性能。</p>
+<h3><span id="43-treeset">4.3 TreeSet</span></h3><p>TreeSet时SortedSet接口的实现类，TreeSet可以保证元素处于<strong>排序状态</strong>，它采用<strong>红黑树</strong>的数据结构来存储集合元素。TreeSet支持两种排序方法：自然排序和定制排序，默认采用<strong>自然排序</strong>。</p>
+<p><strong>♦ 自然排序</strong></p>
+<p>TreeSet会调用集合元素的<code>compareTo(Object obj)</code>方法来比较元素的大小关系，然后将元素按照升序排列，这就是自然排序。如果试图将一个对象添加到TreeSet集合中，则该对象必须实现Comparable接口，否则会抛出异常。当一个对象调用方法与另一个对象比较时，例如obj1.compareTo(obj2)，如果该方法返回0，则两个对象相等；如果返回一个正数，则obj1大于obj2；如果返回一个负数，则obj1小于obj2。</p>
+<p>Java常用类中已经实现了Comparable接口的类有以下几个：</p>
+<p>​    ♦ BigDecimal、BigDecimal以及所有数值型对应的包装类：按照它们对应的数值大小进行比较。</p>
+<p>​    ♦ Charchter：按照字符的unicode值进行比较。</p>
+<p>​    ♦ Boolean：true对应的包装类实例大于false对应的包装类实例。</p>
+<p>​    ♦ String：按照字符串中的字符的unicode值进行比较。</p>
+<p>​    ♦ Date、Time：后面的时间、日期比前面的时间、日期大。</p>
+<p>对于TreeSet集合而言，它判断两个对象是否相等的标准是：两个对象通过compareTo(Object obj)方法比较是否返回0，如果返回0则相等。</p>
+<p> <strong>♦ 定制排序</strong></p>
+<p>想要实现定制排序，需要在创建TreeSet集合对象时，提供一个<strong>Comparator</strong>对象与该TreeSet集合关联，由Comparator对象负责集合元素的排序逻辑。</p>
+<p>综上：自然排序实现的是Comparable接口，定制排序实现的是Comparator接口。</p>
+<h3><span id="44-enumset">4.4 EnumSet</span></h3><p>EnumSet是一个专为<strong>枚举类</strong>设计的集合类，<strong>不允许添加null值</strong>。EnumSet的集合元素也是<strong>有序</strong>的，它以枚举值在Enum类内的<strong>定义顺序</strong>来决定集合元素的顺序。</p>
+<h3><span id="45-各set实现类的性能分析">4.5 各Set实现类的性能分析</span></h3><p>HashSet的性能比TreeSet的性能好（特别是添加，查询元素时），因为TreeSet需要额外的红黑树算法维护元素的次序，如果需要一个保持排序的Set时才用TreeSet，否则应该使用HashSet。</p>
+<p>LinkedHashSet是HashSet的子类，由于需要链表维护元素的顺序，所以插入和删除操作比HashSet要慢，但遍历比HashSet快。</p>
+<p>EnumSet是所有Set实现类中性能最好的，但它只能保存同一个枚举类的枚举值作为集合元素。</p>
+<p>以上几个Set实现类都是<strong>线程不安全</strong>的，如果多线程访问，必须手动保证集合的同步性。</p>
+<h2><span id="5-map">5 Map</span></h2><p>Map接口采用键值对Map&lt;K,V&gt;的存储方式，保存具有映射关系的数据，因此，Map集合里保存两组值，一组值用于保存Map里的key，另外一组值用于保存Map里的value，key和value可以是任意引用类型的数据。<strong>key值不允许重复</strong>，可以为null。如果添加key-value对时Map中已经有重复的key，则新添加的value会<strong>覆盖</strong>该key原来对应的value。常用实现类有HashMap、LinkedHashMap、TreeMap等。</p>
+<h3><span id="51-hashmap-hashtable">5.1 HashMap、HashTable</span></h3><p>HashMap与Hashtable是Map接口的两个典型实现，它们之间的关系完全类似于ArrayList与Vertor。HashTable是一个古老的Map实现类，它提供的方法比较繁琐，目前基本不用了，HashMap与Hashtable主要存在以下两个典型区别：</p>
+<p>♦ HashMap是<strong>线程不安全</strong>，HashTable是<strong>线程安全</strong>的。</p>
+<p>♦ HashMap可以使用null值最为key或value；Hashtable<strong>不允许使用null值作为key和value</strong>，如果把null放进HashTable中，将会发生空指针异常。</p>
+<p>为了成功的在HashMap和Hashtable中存储和获取对象，用作key的对象必须实现<code>hashCode()</code>方法和<code>equals()</code>方法。</p>
+<p><strong>HashMap工作原理如下：</strong></p>
+<p>HashMap是一个数组和链表的结合体。HashMap基于hash原理，通过<code>put()</code>和<code>get()</code>方法存储和获取对象。当我们将键值对传递给put()方法时，它调用建对象的hashCode()方法来计算hashCode值，然后找到bucket位置来储存值对象。当获取对象时，调用hashCode计算hash从而得到bucket位置并进一步调用equals()方法找到正确的键值对，然后返回对象。HashMap使用<strong>链表</strong>来解决碰撞问题，当发生碰撞了，对象将会存储在链表的下一个节点中。在Java 8中，如果一个bucket中碰撞冲突的元素超过某个限制(默认是8)，则使用<strong>红黑树</strong>来替换链表，从而提高速度。</p>
+<p><strong>为什么HashMap是2^n扩容？</strong></p>
+<p>当length=2^n时，hashcode &amp; (length-1) == hashcode % length，不同的key算得得index相同的几率较小，那么数据在数组上分布就比较均匀，也就是说碰撞的几率小，相对的，查询的时候就不用遍历某个位置上的链表，这样查询效率也就较高了。HashMap<strong>初始容量为<code>16</code></strong>，二进制：1111。</p>
+<p><strong>hashmap什么时候进行扩容呢？</strong></p>
+<p>当hashmap中的元素个数超过数组大小<em>负载因子时，就会进行数组扩容，<strong>负载因子的默认值为<code>0.75</code></strong>，也就是说默认情况下，数组大小为16，那么当hashmap中元素个数超过16 </em> 0.75=12的时候，就把数组的大小扩展为2 <em> 16=32，即扩大一倍，然后重新计算每个元素在数组中的位置，而这是一个非常消耗性能的操作，所以如果我们已经预知hashmap中元素的个数，那么预设元素的个数能够有效的提高hashmap的性能。比如说，我们有1000个元素new HashMap(1000), 但是理论上来讲new HashMap(1024)更合适，不过上面annegu已经说过，即使是1000，hashmap也自动会将其设置为1024。 但是new HashMap(1024)还不是更合适的，因为0.75 </em> 1000 &lt; 1000, 也就是说为了让0.75 * size &gt; 1000, 我们必须这样new HashMap(2048)才最合适，既考虑了&amp;的问题，也避免了resize的问题。</p>
+<p><strong>负载因子为什么是0.75？</strong></p>
+<p>负载因子是0.75的时候，空间利用率比较高，而且避免了相当多的Hash冲突，使得底层的链表或者是红黑树的高度比较低，也提升了时间效率。</p>
+<h3><span id="52-linkedhashmap">5.2 LinkedHashMap</span></h3><p>LinkedHashMap使用双向链表来维护key-value对的次序（其实只需要考虑key的次序即可），该链表负责维护Map的迭代顺序，与插入顺序一致，因此性能比HashMap低，但在迭代访问Map里的全部元素时有较好的性能。</p>
+<h3><span id="53-properties">5.3 Properties</span></h3><p>Properties类时Hashtable类的子类，它相当于一个key、value都是String类型的Map，主要用于读取配置文件。</p>
+<h3><span id="54-treemap实现类">5.4 TreeMap实现类</span></h3><p>TreeMap是SortedMap的实现类，是一个<strong>红黑树</strong>的数据结构，每个key-value对作为红黑树的一个节点。TreeMap存储key-value对时，需要根据key对节点进行排序。TreeMap也有两种排序方式：</p>
+<p>♦ 自然排序：TreeMap的所有key必须实现Comparable接口，而且所有的key应该是同一个类的对象，否则会抛出ClassCastException。</p>
+<p>♦ 定制排序：创建TreeMap时，传入一个Comparator对象，该对象负责对TreeMap中的所有key进行排序。</p>
+<h3><span id="55-各map实现类的性能分析">5.5 各Map实现类的性能分析</span></h3><p>♦ HashMap通常比Hashtable（古老的线程安全的集合）要快。</p>
+<p>♦ TreeMap通常比HashMap、Hashtable要慢，因为TreeMap底层采用红黑树来管理key-value。</p>
+<p>♦ LinkedHashMap比HashMap慢一点，因为它需要维护链表来保持key-value的插入顺序。</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+
+    <!-- Footer -->
+    <hr>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/hansyyy" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="mailto:975444913@qq.com" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2020 hansyyy<br></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+<script type="text/javascript" src="/js/love.js"></script>
+<canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+<script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+<script type="text/javascript" src="/js/fireworks.js"></script>
+
+</body>
+
+</html>

@@ -13,6 +13,9 @@
     
 
     
+        <meta name="description" content="ConcurrentHashMapBase 1.7
+ConcurrentHashMap是由Segment数组、HashEntry组成，和HashMap一样是数组加链表。核心数据如 value ，以及HashEntry都是 volatile 修饰的，保证了获取时的可见性。和HashMap相比是线程安全">
+    
 
     <!--Author-->
     
@@ -21,10 +24,13 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="Hansyyy&#39;s Blog">
+        <meta property="og:title" content="ConcurrentHashMap">
     
 
     <!--Open Graph Description-->
+    
+        <meta property="og:description" content="ConcurrentHashMapBase 1.7
+ConcurrentHashMap是由Segment数组、HashEntry组成，和HashMap一样是数组加链表。核心数据如 value ，以及HashEntry都是 volatile 修饰的，保证了获取时的可见性。和HashMap相比是线程安全">
     
 
     <!--Open Graph Site Name-->
@@ -32,7 +38,7 @@
 
     <!--Type page-->
     
-        <meta property="og:type" content="website">
+        <meta property="og:type" content="article">
     
 
     <!--Page Cover-->
@@ -51,7 +57,7 @@
 
     <!-- Title -->
     
-    <title>Hansyyy&#39;s Blog</title>
+    <title>ConcurrentHashMap - Hansyyy&#39;s Blog</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
@@ -154,187 +160,87 @@
 
     <!-- Main Content -->
     <!-- Page Header -->
-<!-- Set your background image for this header in the theme's configuration: index_cover -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
 <header class="intro-header" style="background-image: url('http://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/img/home-bg.jpg')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                    <h1>Hansyyy's Blog</h1>
-                    <hr class="small">
-                    <span class="subheading"></span>
+                <div class="post-heading">
+                    <h1>ConcurrentHashMap</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2020-12-07
+                        
+                    </span>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            
-                <div class="post-preview">
-    <a href="/2020/12/07/post20/">
-        <h2 class="post-title">
-            volatile关键字
-        </h2>
-        
-    </a>
-    <p class="post-meta">
-        <!-- Date and Author -->
-        
-        2020-12-07
-    </p>
-</div>
-<hr>
-            
-                <div class="post-preview">
-    <a href="/2020/12/07/post19/">
-        <h2 class="post-title">
-            ConcurrentHashMap
-        </h2>
-        
-    </a>
-    <p class="post-meta">
-        <!-- Date and Author -->
-        
-        2020-12-07
-    </p>
-</div>
-<hr>
-            
-                <div class="post-preview">
-    <a href="/2020/12/07/post18/">
-        <h2 class="post-title">
-            Java集合框架
-        </h2>
-        
-    </a>
-    <p class="post-meta">
-        <!-- Date and Author -->
-        
-        2020-12-07
-    </p>
-</div>
-<hr>
-            
-                <div class="post-preview">
-    <a href="/2020/08/10/post17/">
-        <h2 class="post-title">
-            Java面试题目合集
-        </h2>
-        
-    </a>
-    <p class="post-meta">
-        <!-- Date and Author -->
-        
-        2020-08-10
-    </p>
-</div>
-<hr>
-            
-                <div class="post-preview">
-    <a href="/2020/08/09/post16/">
-        <h2 class="post-title">
-            算法总结
-        </h2>
-        
-    </a>
-    <p class="post-meta">
-        <!-- Date and Author -->
-        
-        2020-08-09
-    </p>
-</div>
-<hr>
-            
-                <div class="post-preview">
-    <a href="/2020/08/09/post15/">
-        <h2 class="post-title">
-            键入URL后，期间发生了什么？
-        </h2>
-        
-    </a>
-    <p class="post-meta">
-        <!-- Date and Author -->
-        
-        2020-08-09
-    </p>
-</div>
-<hr>
-            
-                <div class="post-preview">
-    <a href="/2020/08/08/post14-1/">
-        <h2 class="post-title">
-            TCP性能提升
-        </h2>
-        
-    </a>
-    <p class="post-meta">
-        <!-- Date and Author -->
-        
-        2020-08-08
-    </p>
-</div>
-<hr>
-            
-                <div class="post-preview">
-    <a href="/2020/08/07/post14/">
-        <h2 class="post-title">
-            DNS
-        </h2>
-        
-    </a>
-    <p class="post-meta">
-        <!-- Date and Author -->
-        
-        2020-08-07
-    </p>
-</div>
-<hr>
-            
-                <div class="post-preview">
-    <a href="/2020/08/06/post13/">
-        <h2 class="post-title">
-            TCP的三次握手和四次挥手
-        </h2>
-        
-    </a>
-    <p class="post-meta">
-        <!-- Date and Author -->
-        
-        2020-08-06
-    </p>
-</div>
-<hr>
-            
-                <div class="post-preview">
-    <a href="/2020/08/06/post12/">
-        <h2 class="post-title">
-            UDP和TCP的区别
-        </h2>
-        
-    </a>
-    <p class="post-meta">
-        <!-- Date and Author -->
-        
-        2020-08-06
-    </p>
-</div>
-<hr>
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/tags/集合框架/">#集合框架</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/categories/java/">java</a>
+
+                    
+                </div>
             
 
-            <ul class="pager">
-    
-    
-        <li class="next"><a href="/page/2/">Older Posts  &rarr;</a></li>
-    
-</ul>
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1><span id="concurrenthashmap">ConcurrentHashMap</span></h1><h2><span id="base-17">Base 1.7</span></h2><p><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glfi8i1pc0j30dw0733ys.jpg" alt="5cd1d2c5ce95c"></p>
+<p>ConcurrentHashMap是由Segment数组、HashEntry组成，和HashMap一样是数组加链表。核心数据如 value ，以及HashEntry都是 volatile 修饰的，保证了获取时的可见性。和HashMap相比是线程安全的。</p>
+<p>ConcurrentHashMap 采用了分段锁技术，其中 Segment 继承于 <strong>ReentrantLock</strong>。不会像 HashTable 那样不管是 put 还是 get 操作都需要做同步处理，理论上 ConcurrentHashMap 支持 CurrencyLevel (Segment 数组数量)的线程并发。每当一个线程占用锁访问一个 Segment 时，不会影响到其他的 Segment。虽然 HashEntry 中的 value 是用 volatile 关键词修饰的，但是并不能保证并发的<strong>原子性</strong>，所以 put 操作时仍然需要加锁处理。</p>
+<p>存在的问题：查询链表效率太低。</p>
+<h2><span id="base-18">base 1.8</span></h2><p><img src="https://i.loli.net/2019/05/08/5cd1d2ce33795.jpg" alt="5cd1d2ce33795"></p>
+<p><strong>1.7与1.8的不同之处：</strong></p>
+<ol>
+<li>抛弃了原有的 Segment 分段锁，而采用了 <code>CAS + synchronized</code> 来保证并发安全性，取消了 ReentrantLock 改为了 <strong>synchronized</strong>。</li>
+<li>将 1.7 中存放数据的 HashEntry 改为 Node，但作用都是相同的。</li>
+<li>采用了红黑树保证查询效率（<code>O(logn)</code>）。</li>
+</ol>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
         </div>
     </div>
-</div>
-
+</article>
 
 
     <!-- Footer -->
