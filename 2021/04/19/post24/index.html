@@ -13,6 +13,11 @@
     
 
     
+        <meta name="description" content="如何避免JVM Full GC频繁？可以根据具体触发Full GC的情况采取对应应对策略。
+
+System.GC()方法的调用
+虽然此方法只是建议JVM进行Full GC，但是很对情况下它还是会触发Full GC，从而增加Full GC频率。所以建议尽量不使用此方法，让JVM自己去管理内存。可通过参">
+    
 
     <!--Author-->
     
@@ -21,10 +26,15 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="Hansyyy&#39;s Blog">
+        <meta property="og:title" content="如何避免JVM Full GC频繁？">
     
 
     <!--Open Graph Description-->
+    
+        <meta property="og:description" content="如何避免JVM Full GC频繁？可以根据具体触发Full GC的情况采取对应应对策略。
+
+System.GC()方法的调用
+虽然此方法只是建议JVM进行Full GC，但是很对情况下它还是会触发Full GC，从而增加Full GC频率。所以建议尽量不使用此方法，让JVM自己去管理内存。可通过参">
     
 
     <!--Open Graph Site Name-->
@@ -32,7 +42,7 @@
 
     <!--Type page-->
     
-        <meta property="og:type" content="website">
+        <meta property="og:type" content="article">
     
 
     <!--Page Cover-->
@@ -51,7 +61,7 @@
 
     <!-- Title -->
     
-    <title>page - Hansyyy&#39;s Blog</title>
+    <title>如何避免JVM Full GC频繁？ - Hansyyy&#39;s Blog</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
@@ -154,189 +164,100 @@
 
     <!-- Main Content -->
     <!-- Page Header -->
-<!-- Set your background image for this header in the theme's configuration: index_cover -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
 <header class="intro-header" style="background-image: url('http://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/img/home-bg.jpg')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                    <h1>Hansyyy's Blog</h1>
-                    <hr class="small">
-                    <span class="subheading"></span>
+                <div class="post-heading">
+                    <h1>如何避免JVM Full GC频繁？</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2021-04-19
+                        
+                    </span>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            
-                <div class="post-preview">
-    <a href="/2020/08/09/post15/">
-        <h2 class="post-title">
-            键入URL后，期间发生了什么？
-        </h2>
-        
-    </a>
-    <p class="post-meta">
-        <!-- Date and Author -->
-        
-        2020-08-09
-    </p>
-</div>
-<hr>
-            
-                <div class="post-preview">
-    <a href="/2020/08/08/post14-1/">
-        <h2 class="post-title">
-            TCP性能提升
-        </h2>
-        
-    </a>
-    <p class="post-meta">
-        <!-- Date and Author -->
-        
-        2020-08-08
-    </p>
-</div>
-<hr>
-            
-                <div class="post-preview">
-    <a href="/2020/08/07/post14/">
-        <h2 class="post-title">
-            DNS
-        </h2>
-        
-    </a>
-    <p class="post-meta">
-        <!-- Date and Author -->
-        
-        2020-08-07
-    </p>
-</div>
-<hr>
-            
-                <div class="post-preview">
-    <a href="/2020/08/06/post13/">
-        <h2 class="post-title">
-            TCP的三次握手和四次挥手
-        </h2>
-        
-    </a>
-    <p class="post-meta">
-        <!-- Date and Author -->
-        
-        2020-08-06
-    </p>
-</div>
-<hr>
-            
-                <div class="post-preview">
-    <a href="/2020/08/06/post12/">
-        <h2 class="post-title">
-            UDP和TCP的区别
-        </h2>
-        
-    </a>
-    <p class="post-meta">
-        <!-- Date and Author -->
-        
-        2020-08-06
-    </p>
-</div>
-<hr>
-            
-                <div class="post-preview">
-    <a href="/2020/08/05/post10/">
-        <h2 class="post-title">
-            HTTP Get和Post的区别
-        </h2>
-        
-    </a>
-    <p class="post-meta">
-        <!-- Date and Author -->
-        
-        2020-08-05
-    </p>
-</div>
-<hr>
-            
-                <div class="post-preview">
-    <a href="/2020/08/05/post8/">
-        <h2 class="post-title">
-            HTTP与HTTPS的区别
-        </h2>
-        
-    </a>
-    <p class="post-meta">
-        <!-- Date and Author -->
-        
-        2020-08-05
-    </p>
-</div>
-<hr>
-            
-                <div class="post-preview">
-    <a href="/2020/07/27/post9/">
-        <h2 class="post-title">
-            设计模式（一）
-        </h2>
-        
-    </a>
-    <p class="post-meta">
-        <!-- Date and Author -->
-        
-        2020-07-27
-    </p>
-</div>
-<hr>
-            
-                <div class="post-preview">
-    <a href="/2020/07/27/post7/">
-        <h2 class="post-title">
-            Java深浅拷贝
-        </h2>
-        
-    </a>
-    <p class="post-meta">
-        <!-- Date and Author -->
-        
-        2020-07-27
-    </p>
-</div>
-<hr>
-            
-                <div class="post-preview">
-    <a href="/2020/07/04/post6/">
-        <h2 class="post-title">
-            Spring框架
-        </h2>
-        
-    </a>
-    <p class="post-meta">
-        <!-- Date and Author -->
-        
-        2020-07-04
-    </p>
-</div>
-<hr>
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/tags/JVM/">#JVM</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/categories/Java/">Java</a>
+
+                    
+                </div>
             
 
-            <ul class="pager">
-    
-        <li class="previous"><a href="/">&larr;  Newer Posts</a></li>
-    
-    
-        <li class="next"><a href="/page/3/">Older Posts  &rarr;</a></li>
-    
-</ul>
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1><span id="如何避免jvm-full-gc频繁">如何避免JVM Full GC频繁？</span></h1><p>可以根据具体触发Full GC的情况采取对应应对策略。</p>
+<ol>
+<li><p><strong>System.GC()方法的调用</strong></p>
+<p>虽然此方法只是建议JVM进行Full GC，但是很对情况下它还是会触发Full GC，从而增加Full GC频率。所以建议尽量不使用此方法，让JVM自己去管理内存。可通过参数-XX:+ DisableExplicitGC来禁止RMI调用System.gc。</p>
+</li>
+<li><p><strong>老年代空间不足</strong></p>
+<p>老年代只会在新生代对象晋升到老年代或者创建了大对象、大数组时会出现空间不足情况。如果当执行完Full GC后空间仍然不足，则会产生OOM。对于这种情况，尽量在对象在Minor GC阶段被回收、增加年轻代晋升为老年代的年龄以及少创建大对象和大数组。</p>
+<p>大对象，是指需要大量连续内存空间的java对象。</p>
+</li>
+<li><p><strong>CMS GC时出现promotion failed和concurrent mode failure</strong></p>
+<p>promotion failed：是在进行Minor GC时，survivor space放不下、对象只能放入老年代，而此时老年代也放不下造成的；</p>
+<p>concurrent mode failure：是在执行CMS GC的过程中同时有对象要放入老年代，而此时老年代空间不足造成的(有时候“空间不足”是CMS GC时当前的浮动垃圾过多导致暂时性的空间不足触发Full GC)。<br>针对这两个问题，可以增大survivor space以及老年代空间。</p>
+</li>
+<li><p><strong>统计到Minor GC晋升到老年代的平均大小大于老年代剩余空间</strong></p>
+<p>Hotspot为了避免由于新生代对象晋升到老年代导致老年代空间不足的现象，在进行Minor GC时，做了一个判断，如果之前统计所得到的Minor GC晋升到旧生代的平均大小大于旧生代的剩余空间，那么就直接触发Full GC。</p>
+</li>
+<li><p><strong>堆中分配大对象</strong></p>
+<p>大对象会直接进入老年代，而老年代虽然有很大的剩余空间，但是无法找到足够大的连续空间来分配给当前对象，此种情况就会触发JVM进行Full GC。</p>
+<p>为了解决这个问题，CMS垃圾收集器提供了一个可配置的参数，即-XX:+UseCMSCompactAtFullCollection开关参数，用于在“享受”完Full GC服务之后额外免费赠送一个碎片整理的过程，内存整理的过程无法并发的，空间碎片问题没有了，但提顿时间不得不变长了。JVM设计者们还提供了另外一个参数 -XX:CMSFullGCsBeforeCompaction,这个参数用于设置在执行多少次不压缩的Full GC后,跟着来一次带压缩的。</p>
+</li>
+<li><p><strong>永生区空间不足</strong></p>
+<p>增大永生区空间或转为使用CMS GC。</p>
+</li>
+</ol>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
         </div>
     </div>
-</div>
-
+</article>
 
 
     <!-- Footer -->

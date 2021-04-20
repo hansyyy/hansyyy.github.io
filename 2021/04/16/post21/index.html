@@ -13,7 +13,21 @@
     
 
     
-        <meta name="description" content="Java反射Class类在Java中除了基本类型外，其余的全是class(包括接口)，JVM为每一种基本类型也创建了Class。而class是由JVM在执行过程中动态加载的，当JVM在第一次读取到一种class类型时就将其加载到内存。每加载一种class时，JVM就为其创建一个Class类型的实例，">
+        <meta name="description" content="Java反射
+
+
+Class类
+反射
+访问字段
+调用方法
+调用构造方法
+获取继承关系
+
+
+
+
+
+Class类在Java中除了基本类型外，其余的全是class(包括接口)，JVM为每一种基本类型也创建了Class。而class是由JVM在执行过程中动态加载的，当JVM在第一次读取到一种class类型时">
     
 
     <!--Author-->
@@ -28,7 +42,21 @@
 
     <!--Open Graph Description-->
     
-        <meta property="og:description" content="Java反射Class类在Java中除了基本类型外，其余的全是class(包括接口)，JVM为每一种基本类型也创建了Class。而class是由JVM在执行过程中动态加载的，当JVM在第一次读取到一种class类型时就将其加载到内存。每加载一种class时，JVM就为其创建一个Class类型的实例，">
+        <meta property="og:description" content="Java反射
+
+
+Class类
+反射
+访问字段
+调用方法
+调用构造方法
+获取继承关系
+
+
+
+
+
+Class类在Java中除了基本类型外，其余的全是class(包括接口)，JVM为每一种基本类型也创建了Class。而class是由JVM在执行过程中动态加载的，当JVM在第一次读取到一种class类型时">
     
 
     <!--Open Graph Site Name-->
@@ -212,7 +240,21 @@
 
             <!-- Post Main Content -->
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <h1><span id="java反射">Java反射</span></h1><h2><span id="class类">Class类</span></h2><p>在Java中除了基本类型外，其余的全是<code>class</code>(包括接口)，JVM为每一种基本类型也创建了<code>Class</code>。而<code>class</code>是由JVM在执行过程中动态加载的，当JVM在第一次读取到一种<code>class</code>类型时就将其加载到内存。每加载一种<code>class</code>时，JVM就为其创建一个<code>Class</code>类型的实例，并关联起来。因为<code>Class</code>类的构造方法是<code>private</code>所以只有JVM能创建<code>Class</code>实例，我们自己编写的Java程序是无法创建的。所以，JVM持有的每一个<code>Class</code>实例都指向了一个数据类型，一个<code>Class</code>实例白含量该<code>class</code>所有的信息。</p>
+                <h1><span id="java反射">Java反射</span></h1><hr>
+<!-- toc -->
+<ul>
+<li><a href="#class类">Class类</a></li>
+<li><a href="#反射">反射</a><ul>
+<li><a href="#访问字段">访问字段</a></li>
+<li><a href="#调用方法">调用方法</a></li>
+<li><a href="#调用构造方法">调用构造方法</a></li>
+<li><a href="#获取继承关系">获取继承关系</a></li>
+</ul>
+</li>
+</ul>
+<!-- tocstop -->
+<hr>
+<h2><span id="class类">Class类</span></h2><p>在Java中除了基本类型外，其余的全是<code>class</code>(包括接口)，JVM为每一种基本类型也创建了<code>Class</code>。而<code>class</code>是由JVM在执行过程中动态加载的，当JVM在第一次读取到一种<code>class</code>类型时就将其加载到内存。每加载一种<code>class</code>时，JVM就为其创建一个<code>Class</code>类型的实例，并关联起来。因为<code>Class</code>类的构造方法是<code>private</code>所以只有JVM能创建<code>Class</code>实例，我们自己编写的Java程序是无法创建的。所以，JVM持有的每一个<code>Class</code>实例都指向了一个数据类型，一个<code>Class</code>实例白含量该<code>class</code>所有的信息。</p>
 <p>由于JVM为每个加载的<code>class</code>创建了对应的<code>Class</code>实例，并在实例中保存了该<code>class</code>的所有信息，包括类名、包名、父类、实现的接口、所有方法、字段等，因此，如果获取了某个<code>Class</code>实例，我们就可以通过这个<code>Class</code>实例获取到该实例对应的<code>class</code>的所有信息。</p>
 <h2><span id="反射">反射</span></h2><p>通过<code>Class</code>实例获取<code>class</code>信息的方法称为反射（Reflection）。</p>
 <p>有三个方法来获取一个<code>class</code>的<code>Class</code>实例：</p>
